@@ -14,6 +14,10 @@ header {
     height: 1080px;
 }
 
+section {
+    height: 1080px;
+}
+
 .style {
     font-family: Courier;
 }
