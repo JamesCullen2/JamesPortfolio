@@ -49,6 +49,10 @@ section {
     border-color: white;
 }
 
+.image-icons {
+    max-width: 150px;
+}
+
 li {
     float: right;
     list-style: none;
