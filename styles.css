@@ -15,3 +15,16 @@ body {
     width: 1200px;
     overflow: auto;
 }
+
+.navbar {
+    overflow: hidden;
+    background-color: white;
+}
+
+main {
+    background: url(code_skills.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 812px;
+}
+
