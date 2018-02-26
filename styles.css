@@ -15,7 +15,7 @@ header {
 }
 
 .style {
-    font-family: sans-serif;
+    font-family: Courier;
 }
 
 .container {
@@ -25,7 +25,7 @@ header {
 }
 
 .nav-buttons a:link, .nav-buttons a:visited {
-    color: black;
+    color: white;
     text-decoration: none;
     text-align: center;
     padding-top: 10px;
@@ -42,14 +42,16 @@ header {
     padding-bottom: 10px;
     background-color: white;
     border-style: solid;
-    border-color: black;
-    background-color: white;
+    border-color: white;
 }
 
-.navbar {
-    overflow: hidden;
-    background-color: white;
+li {
+    float: right;
+    list-style: none;
+    margin-right: 10px;
 }
+
+
 
 
 
