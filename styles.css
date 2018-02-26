@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.style {
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    overflow: auto;
+}
