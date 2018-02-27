@@ -31,19 +31,19 @@ li {
     margin-right: 10px;
 }
 
+a {
+    padding: 15px 15px 15px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
 .nav-buttons a:link, .nav-buttons a:visited {
     color: white;
-    text-decoration: none;
-    text-align: center;
-    padding: 10px 10px;
     display: inline-block;
 }
 
 .nav-buttons a:hover {
     color: black;
-    text-decoration: none;
-    text-align: center;
-    padding: 10px 0px 10px 0px;
     background-color: white;
     border-style: solid;
     border-color: white;
