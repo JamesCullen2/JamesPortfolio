@@ -4,10 +4,7 @@
 
 body {
     margin: 0;
-}
-
-.style {
-    font-family: Courier;
+    font-family: Courier, sans-serif;
 }
 
 header {
