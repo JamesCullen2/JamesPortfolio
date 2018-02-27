@@ -26,9 +26,8 @@ ul {
 }
 
 li {
-    float: right;
     list-style: none;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
 }
 
 a {
@@ -58,16 +57,37 @@ section {
     max-width: 150px;
 }
 
-/* Mobile */
+/*Tablet */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 600px) {
     body {
         background-color: lightblue;
     }
-    .nav-buttons {
-        width: 100%;
-        float: left;
+    li {
+        float: right;
+        list-style: none;
+        margin-right: 10px;
     }
+    .nav-buttons {
+        width: 10%;
+    }
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+    li {
+        float: right;
+        list-style: none;
+        margin-right: 10px;
+    }
+    .nav-buttons {
+        width: 10%;
+    }
+}
 
 
 
