@@ -36,6 +36,7 @@ li {
     text-decoration: none;
     text-align: center;
     padding: 10px 10px;
+    display: inline-block;
 }
 
 .nav-buttons a:hover {
@@ -46,6 +47,7 @@ li {
     background-color: white;
     border-style: solid;
     border-color: white;
+    display: inline-block;
 }
 
 section {
@@ -56,6 +58,16 @@ section {
     max-width: 150px;
 }
 
+/* Mobile */
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+    .nav-buttons {
+        width: 100%;
+        float: left;
+    }
 
 
 
