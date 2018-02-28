@@ -69,14 +69,17 @@ section {
 /*Tablet */
 
 @media only screen and (min-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
     header {
         background-image: url(tablet_code_image.jpg);
     }
-    /*li {*/
-        /*list-style: none;*/
-        /*margin-right: 10px;*/
-        /*text-align: right;*/
-    /*}*/
+    li {
+        list-style: none;
+        margin-right: 10px;
+        text-align: right;
+    }
     /*li {*/
         /*!*float: right;*!*/
         /*list-style: none;*/
@@ -89,7 +92,10 @@ section {
 
 /* Desktop */
 
-@media only screen and (min-width: 1400px)
+@media only screen and (min-width: 1400px) {
+    /*body {*/
+        /*background-color: lightblue;*/
+    /*}*/
     header {
         background-image: url(large_code_skills.jpg);
     }
