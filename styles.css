@@ -9,8 +9,10 @@ body {
 
 header {
     background-image: url(code_skills.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
     width: 100%;
     height: 1080px;
 }
