@@ -14,7 +14,7 @@ header {
     background-size: cover;
     position: relative;
     width: 100%;
-    height: 900px;
+    height: 100vh;
 }
 
 .container {
@@ -52,7 +52,7 @@ li {
 }
 
 section {
-    height: 1080px;
+    height: 100vh;
     padding: 0 20 0 20;
 }
 
