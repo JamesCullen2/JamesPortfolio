@@ -79,11 +79,6 @@ section {
         margin-right: 10px;
         text-align: right;
     }
-    /*li {*/
-        /*!*float: right;*!*/
-        /*list-style: none;*/
-        /*margin-right: 10px;*/
-    /*}*/
     .nav-buttons {
         width: 10%;
     }
@@ -92,9 +87,6 @@ section {
 /* Desktop */
 
 @media only screen and (min-width: 1400px) {
-    /*body {*/
-        /*background-color: lightblue;*/
-    /*}*/
     header {
         background-image: url(large_code_skills.jpg);
     }
