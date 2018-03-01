@@ -69,9 +69,6 @@ section {
 /*Tablet */
 
 @media only screen and (min-width: 600px) {
-    body {
-        background-color: lightblue;
-    }
     header {
         background-image: url(tablet_code_image.jpg);
     }
