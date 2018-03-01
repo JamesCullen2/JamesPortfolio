@@ -34,17 +34,14 @@ li {
 }
 
 .nav-buttons a:link, .nav-buttons a:visited {
-    color: white;
+    color: #FFFFFF;
     display: inline-block;
     padding: 15px;
     text-decoration: none;
 }
 
 .nav-buttons a:hover {
-    color: black;
-    background-color: white;
-    border-style: solid;
-    border-color: white;
+    color: #000000;
     display: inline-block;
     padding: 15px;
     text-decoration: none;
@@ -59,22 +56,26 @@ section {
     max-width: 150px;
 }
 
-.footer-links {
-    overflow: hidden;
-    position: absolute;
-    display: inline-block;
-    width: 100%;
-    min-height: 30vh;
-}
-
 .footer-nav-bar {
     float: left;
     margin: 0 auto;
     width: 25%;
-    border: 5px white;
+    border: 5px #FFFFFF;
+    display: inline-block;
     position: relative;
     text-align: center;
+    padding: 0 60px;
 }
+
+.footer-links {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    min-height: 30vh;
+}
+
+
 
 
 /*Tablet */
@@ -88,11 +89,23 @@ section {
         margin-right: 10px;
         text-align: left;
     }
+    .footer-links {
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        height: 30vh;
+    }
+    .footer-nav-bar {
+        padding: 0 70px;
+    }
+    .footer-nav-buttons {
+        width: 30%;
+    }
 }
 
 /* Desktop */
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
     header {
         background-image: url(large_code_skills.jpg);
     }
@@ -101,7 +114,6 @@ section {
         list-style: none;
         margin-right: 10px;
     }
-
     .footer-links {
         overflow: hidden;
         position: relative;
@@ -110,10 +122,9 @@ section {
         height: 30vh;
     }
     .footer-nav-bar {
-        float: left;
         margin: 0 auto;
         width: 100%;
-        border: 5px white;
+        border: 5px #FFFFFF;
         position: center;
         text-align: center;
     }
