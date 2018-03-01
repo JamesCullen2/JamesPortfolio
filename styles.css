@@ -64,7 +64,7 @@ section {
     position: absolute;
     display: inline-block;
     width: 100%;
-    height: 30vh;
+    min-height: 30vh;
 }
 
 .footer-nav-bar {
@@ -72,7 +72,6 @@ section {
     margin: 0 auto;
     width: 25%;
     border: 5px white;
-    box-sizing: border-box;
     position: relative;
     text-align: center;
 }
@@ -114,9 +113,7 @@ section {
         float: left;
         margin: 0 auto;
         width: 100%;
-        /*margin-top: 50px;*/
         border: 5px white;
-        box-sizing: border-box;
         position: center;
         text-align: center;
     }
