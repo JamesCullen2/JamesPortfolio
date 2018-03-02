@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-image: url(mobile_code_image.jpg);
+    background-image: url("mobile_code_image.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,24 +75,17 @@ section {
     min-height: 30vh;
 }
 
-
-
-
 /*Tablet */
 
 @media only screen and (min-width: 600px) {
     header {
-        background-image: url(tablet_code_image.jpg);
+        background-image: url("tablet_code_image.jpg");
     }
     li {
-        list-style-type: none;
         margin-right: 10px;
         text-align: left;
     }
     .footer-links {
-        overflow: hidden;
-        position: relative;
-        display: inline-block;
         height: 30vh;
     }
     .footer-nav-bar {
@@ -107,17 +100,13 @@ section {
 
 @media only screen and (min-width: 1200px) {
     header {
-        background-image: url(large_code_skills.jpg);
+        background-image: url("large_code_skills.jpg");
     }
     li {
         float: right;
-        list-style: none;
         margin-right: 10px;
     }
     .footer-links {
-        overflow: hidden;
-        position: relative;
-        display: inline-block;
         width: 100%;
         height: 30vh;
     }
@@ -132,13 +121,3 @@ section {
         width: 30%;
     }
  }
-
-
-
-
-
-
-
-
-
-
