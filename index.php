@@ -1,12 +1,5 @@
 <?php
 
-session_start();
-
-if($_SESSION['submitted']) {
-    header('Location: admin.php');
-    exit;
-}
-
 ?>
 
 <h1>Portfolio Edit Page</h1>
