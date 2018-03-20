@@ -34,16 +34,16 @@ require ('admin.php');
     <div>
     <h2>About Me</h2>
     <h2>Edit</h2>
-        <select name="subtitle">
-            <option value="my background">my background</option>
-            <option value="my skills">my skills</option>
-            <option value="my interests">my interests</option>
+        <select name="selectSubtitle">
+            <option value="<?php echo ($subtitle[0]['subtitle']) ?>">
+            <option value="<?php echo ($subtitle[1]['subtitle']) ?>">my skills</option>
+            <option value="<?php echo $subtitle [2]['subtitle'] ?>"</option>
             <input type="submit" value="Get">
         </select>
         <br><br>
         <form method="post" action="admin.php">
             <label for="subtitle">Subtitle</label>
-            <input type="text" name="subtitle" value="<?php echo ($subtitle[0]['subtitle']) ?>">
+            <input type="text" name="subtitle" >
             <label for="description">Description</label>
             <input type="text" name="description">
             <input type="submit" value="Apply">
