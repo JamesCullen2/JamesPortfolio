@@ -1,5 +1,7 @@
 <?php
 
+require ('admin.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -23,22 +25,39 @@
         </select>
         <label for="link">Link URL</label>
         <input type="url" name="link url">
-        </form>
         <input type="submit">
     </form>
     </div>
 
     <div>
     <h2>About Me</h2>
-    <br><br>
+    <h2>Edit</h2>
+        <select name="subtitle">
+            <option value="my background">my background</option>
+            <option value="my skills">my skills</option>
+            <option value="my interests">my interests</option>
+            <input type="submit" value="Get">
+        </select>
+        <br><br>
         <form method="post" action="admin.php">
             <label for="subtitle">Subtitle</label>
             <input type="text" name="subtitle">
             <label for="description">Description</label>
             <input type="text" name="description">
-        </form>
-        <input type="submit">
+            <input type="submit" value="Apply">
     </form>
+    </div>
+
+    <div>
+        <h2>About Me</h2>
+        <br><br>
+        <form method="post" action="admin.php">
+            <label for="subtitle">Subtitle</label>
+            <input type="text" name="subtitle">
+            <label for="description">Description</label>
+            <input type="text" name="description">
+            <input type="submit">
+        </form>
     </div>
 
     <div>
@@ -49,8 +68,26 @@
         <input type="text" name="subtitle">
         <label for="description">Description</label>
         <input type="text" name="description">
+        <input type="submit">
     </form>
-    <input type="submit">
+    </div>
+
+    <div>
+        <h2>Portfolio</h2>
+        <h2>Edit</h2>
+        <select name="subtitle">
+            <option value="websites">websites</option>
+            <option value="web apps">web apps</option>
+            <input type="submit" value="Get">
+        </select>
+        <br><br>
+        <form method="post" action="admin.php">
+            <label for="subtitle">Subtitle</label>
+            <input type="text" name="subtitle">
+            <label for="description">Description</label>
+            <input type="text" name="description">
+            <input type="submit" value="Apply">
+        </form>
     </div>
 
     <div>
@@ -65,8 +102,8 @@
         </select>
         <label for="description">Description</label>
         <input type="text" name="description">
-    </form>
     <input type="submit">
+    </form>
     </div>
 
     <div>
@@ -77,8 +114,8 @@
         <input type="text" name="subtitle">
         <label for="description">Description</label>
         <input type="text" name="description">
-    </form>
     <input type="submit">
+    </form>
     </div>
 </body>
 </html>
