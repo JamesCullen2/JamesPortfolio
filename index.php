@@ -1,5 +1,7 @@
 <?php
 
+$db = new PDO('mysql:host = 127.0.0.1; dbname=portfolio', 'root');
+
 require ('admin.php');
 
 ?>
@@ -41,7 +43,7 @@ require ('admin.php');
         <br><br>
         <form method="post" action="admin.php">
             <label for="subtitle">Subtitle</label>
-            <input type="text" name="subtitle">
+            <input type="text" name="subtitle" value="<?php echo ($subtitle[0]['subtitle']) ?>">
             <label for="description">Description</label>
             <input type="text" name="description">
             <input type="submit" value="Apply">
