@@ -7,6 +7,7 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 $subtitleArray = getAboutMeSubtitleFromDatabase($db);
 $textArray = getAboutMeDescriptionFromDatabase($db);
+//addAboutMeInfoToDatabase($_POST,$db);
 
 ?>
 
@@ -38,32 +39,30 @@ $textArray = getAboutMeDescriptionFromDatabase($db);
     <div>
     <h2>About Me</h2>
     <h2>Edit</h2>
-        <form id="about me" action="index.php" method="post">
+        <form id="editAboutMe" action="index.php" method="post">
             <select name="selectSubtitle">
                 <?php echo listingSubtitles($subtitleArray) ?>
             </select>
             <input type='submit' value='Get'>
         </form>
         <br><br>
-        <textarea rows="25" cols="50" name="description" form="about me">
+        <textarea rows="25" cols="50" name="description" form="editAboutMe">
             <?php echo populateDescriptionForm($textArray) ?>
         </textarea>
             <input type="submit" value="Apply">
-<!--        <form method="post" action="index.php">-->
-<!--            <label for="description">Description</label>-->
-<!--            <input type="text" name="description">-->
     </form>
     </div>
 
     <div>
         <h2>About Me</h2>
-        <br><br>
-        <form method="post" action="admin.php">
+        <h2>Add</h2>
+        <form id="addAboutMe" method="post" action="admin.php">
             <label for="subtitle">Subtitle</label>
             <input type="text" name="subtitle">
-            <label for="description">Description</label>
-            <input type="text" name="description">
-            <input type="submit">
+            <br><br>
+            <textarea rows="25" cols="50" name="text" form="addAboutMe">
+            </textarea>
+            <input type="submit" name="submitNew" value="Add">
         </form>
     </div>
 
