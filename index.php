@@ -6,6 +6,7 @@ $db = new PDO('mysql:host = 127.0.0.1; dbname=portfolio', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 $subtitleArray = getAboutMeSubtitleFromDatabase($db);
+$textArray = getAboutMeDescriptionFromDatabase($db);
 
 ?>
 
@@ -37,20 +38,20 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
     <div>
     <h2>About Me</h2>
     <h2>Edit</h2>
-            <form action="admin.php">
+        <form id="about me" action="index.php" method="post">
             <select name="selectSubtitle">
                 <?php echo listingSubtitles($subtitleArray) ?>
             </select>
             <input type='submit' value='Get'>
-            </form>
-
+        </form>
         <br><br>
-        <form method="post" action="admin.php">
-            <label for="subtitle">Subtitle</label>
-            <input type="text" name="subtitle" >
-            <label for="description">Description</label>
-            <input type="text" name="description">
+        <textarea rows="25" cols="50" name="description" form="about me">
+            <?php echo populateDescriptionForm($textArray) ?>
+        </textarea>
             <input type="submit" value="Apply">
+<!--        <form method="post" action="index.php">-->
+<!--            <label for="description">Description</label>-->
+<!--            <input type="text" name="description">-->
     </form>
     </div>
 
