@@ -1,8 +1,11 @@
 <?php
 
-$db = new PDO('mysql:host = 127.0.0.1; dbname=portfolio', 'root');
-
 require ('admin.php');
+
+$db = new PDO('mysql:host = 127.0.0.1; dbname=portfolio', 'root');
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+$subtitleArray = getAboutMeSubtitleFromDatabase($db);
 
 ?>
 
@@ -34,12 +37,13 @@ require ('admin.php');
     <div>
     <h2>About Me</h2>
     <h2>Edit</h2>
-        <select name="selectSubtitle">
-            <option value="<?php echo ($subtitle[0]['subtitle']) ?>">
-            <option value="<?php echo ($subtitle[1]['subtitle']) ?>">my skills</option>
-            <option value="<?php echo $subtitle [2]['subtitle'] ?>"</option>
-            <input type="submit" value="Get">
-        </select>
+            <form action="admin.php">
+            <select name="selectSubtitle">
+                <?php echo listingSubtitles($subtitleArray) ?>
+            </select>
+            <input type='submit' value='Get'>
+            </form>
+
         <br><br>
         <form method="post" action="admin.php">
             <label for="subtitle">Subtitle</label>
