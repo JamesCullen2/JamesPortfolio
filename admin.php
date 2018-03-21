@@ -56,6 +56,45 @@ function populateDescriptionForm($textArray) {
     return $results;
 }
 
+
+/**this function is to insert new data into about me table in db
+ *
+ * @param $db array of subtitle and text to be sent to db
+ *
+ * @param $_POST to collect form data from index page
+ *
+ * @return string text to populate new row of about_me table
+ */
+//function addAboutMeInfoToDatabase($db, $_POST) {
+//    $query = $db->prepare("INSERT INTO `about_me` (`subtitle`, `text`)
+//                            VALUES (:subtitle, :text);");
+//    $subtitle = '?';
+//    $text = '?';
+//    $query->bindParam($_POST ['subtitle']);
+//    $query->bindParam($_POST ['text']);
+//    $query->execute([$subtitle, $text]);
+//    return ();
+//}
+
+//function addAboutMeInfoToDatabase($_POST, $db) {
+//    $query = $db->prepare("INSERT INTO `about_me` (`subtitle`, `text`)
+//                            VALUES (:subtitle, :text);");
+//    $query->bindValue(':subtitle', $_POST['subtitle']);
+//    $query->bindValue(':text', $_POST['text']);
+//    $query->execute();
+//}
+
+//function postAboutMeInfoToDatabase($aboutMeArray) {
+//    $results = " ";
+//    foreach ($aboutMeArray as $value) {
+//        $results = $value['subtitle']['text'];
+//    }
+//    return $results;
+//}
+
+
+
+
 /**this function is to make sure the relevant text is populated according to subtitle selected in listingSubtitles
  *
  * @param
@@ -69,28 +108,7 @@ function populateDescriptionForm($textArray) {
 //        return
 //    }
 //}
-//
-//
-//
-//
-//$email = $_POST['email'];
-//$password = $_POST['password'];
-//$correctEmail = 'gmail';
-//$correctPassword = 'hello';
-//
-//function checkCredentials($email, $password, $correctEmail, $correctPassword) {
-//if($email==$correctEmail&&$password==$correctPassword || $_SESSION['loggedIn']==TRUE) {
-//$_SESSION['loggedIn'] = TRUE;
-//return "Logged in!";
-//} else {
-//$_SESSION['loggedIn'] = FALSE;
-//header('Location: index.php');
-//exit;
-//}
-//}
-//
-//echo checkCredentials($email, $password, $correctEmail, $correctPassword);
-//
+
 
 ?>
 
