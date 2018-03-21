@@ -1,14 +1,20 @@
 <?php
 
-$db = new PDO('mysql:host = 127.0.0.1; dbname=portfolio', 'root');
+function getAboutMeSubtitleFromDatabase($db) {
+    $query = $db->prepare("SELECT `subtitle` FROM `about_me`;");
+    $query->execute();
+    return $query->fetchAll();
+}
 
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+function listingSubtitles($subtitleArray) {
+    $results = " ";
+    foreach ($subtitleArray as $value) {
+        $results .=  "<option value='" . $value['subtitle'] . "'>" . $value['subtitle'] . "</option>";
+    }
+    return $results;
+}
 
-$query = $db->prepare("SELECT `subtitle` FROM `about_me`;");
 
-$query->execute();
-
-$subtitle = $query->fetchAll();
 
 ?>
 
