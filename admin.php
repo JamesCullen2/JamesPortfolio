@@ -92,6 +92,22 @@ function addAboutMe($db, $newSubtitle, $newDescription) {
 }
 
 
+/**this function is to delete data from about_me section
+ *
+ * @param $db array of subtitle and text from db
+ *
+ * @param $oldSection string of text pulled from db as description
+ *
+ * @return string of old text deleted from db
+ *
+ */
+function deleteAboutMeSection($db, $oldSection) {
+    $query = $db->prepare("DELETE FROM `about_me`
+                            WHERE `text` = :oldSection;");
+    $query->bindParam(':oldSection', $oldSection);
+    $query->execute();
+}
+
 //function addAboutMeInfoToDatabase($db) {
 //    $query = $db->prepare("INSERT INTO `about_me` (`subtitle`, `text`)
 //                            VALUES ('hello', 'world');");
