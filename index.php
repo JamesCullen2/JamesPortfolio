@@ -41,8 +41,9 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
 </head>
 <body>
     <div>
-    <h2>About Me</h2>
-    <h2>Edit</h2>
+        <h1>James Cullen: Portfolio Content Management System</h1>
+        <h2>About Me Section</h2>
+        <h2>Edit</h2>
         <form id="editAboutMe" action="index.php" method="post">
             <select name="subtitleId">
                 <?php echo listingSubtitles($subtitleArray) ?>
@@ -58,7 +59,6 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
         </form>
     </div>
     <div>
-        <h2>About Me</h2>
         <h2>Add</h2>
         <form id="addAboutMe" method="post" action="index.php">
             <label for="subtitle">Subtitle</label>
@@ -70,7 +70,6 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
         </form>
     </div>
     <div>
-        <h2>About Me</h2>
         <h2>Delete</h2>
         <form id="deleteAboutMe" method="post" action="index.php">
             <select name="deleteSection">
@@ -78,6 +77,7 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
             </select>
             <input type='submit' value='Delete'>
         </form>
+        <br><br>
     </div>
 </body>
 </html>
