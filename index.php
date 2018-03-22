@@ -19,6 +19,11 @@ if($_POST['newText'] != NULL && $_SESSION['oldText'] != NULL) {
     updateDescription($db, $oldText, $newText);
 }
 
+if($_POST['newSubtitle'] != NULL && $_POST['newDescription'] != NULL) {
+    $newSubtitle = $_POST['newSubtitle'];
+    $newDescription = $_POST['newDescription'];
+    addAboutMe($db, $newSubtitle, $newDescription);
+}
 
 $subtitleArray = getAboutMeSubtitleFromDatabase($db);
 
@@ -52,13 +57,13 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
     <div>
         <h2>About Me</h2>
         <h2>Add</h2>
-        <form id="addAboutMe" method="post" action="admin.php">
+        <form id="addAboutMe" method="post" action="index.php">
             <label for="subtitle">Subtitle</label>
-            <input type="text" name="subtitle">
+            <input type="text" name="newSubtitle">
             <br><br>
-            <textarea rows="25" cols="50" name="text" form="addAboutMe">
+            <textarea rows="25" cols="50" name="newDescription">
             </textarea>
-            <input type="submit" name="submitNew" value="Add">
+            <input type="submit" value="Add">
         </form>
     </div>
 
