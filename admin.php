@@ -1,20 +1,20 @@
 <?php
 
 
-/**this function is to get subtitle data for the about me section from the database
+/**this function is to get subtitle data for the about_me section from the database
  *
  * @param $db array of subtitle field from about me table from db
  *
  * @return array of subtitle field
  */
 function getAboutMeSubtitleFromDatabase($db) {
-    $query = $db->prepare("SELECT `subtitle` FROM `about_me`;");
+    $query = $db->prepare("SELECT `id`,`subtitle` FROM `about_me`;");
     $query->execute();
     return $query->fetchAll();
 }
 
 
-/**this function is to return the names of each subtitle in about me section into a drop-down list
+/**this function is to return the names of each subtitle in about_me section into a drop-down list
  *
  * @param $subtitleArray array of values in subtitle field from about me table
  *
@@ -23,48 +23,69 @@ function getAboutMeSubtitleFromDatabase($db) {
 function listingSubtitles($subtitleArray) {
     $results = " ";
     foreach ($subtitleArray as $value) {
-        $results .=  "<option value='" . $value['subtitle'] . "'>" . $value['subtitle'] . "</option>";
+        $results .=  "<option value='" . $value['id'] . "'>" . $value['subtitle'] . "</option>";
     }
     return $results;
 }
 
 
-/**this function is to get text field from about me table in db
+/**this function is to get text field from about_me table in db
  *
  * @param $db array about me table from portfolio database
  *
  * @return mixed array of text field from about me table
  */
-function getAboutMeDescriptionFromDatabase($db) {
-    $query = $db->prepare("SELECT `text`,`subtitle` FROM `about_me` WHERE `subtitle` = 'my background' GROUP BY `text`;");
+function getAboutMeDescriptionFromDatabase($db, $id) {
+    $query = $db->prepare("SELECT `id`, `text`,`subtitle` 
+                            FROM `about_me` 
+                            WHERE `id` =" . $id . " 
+                            GROUP BY `text`;");
     $query->execute();
-    return $query->fetchAll();
+    return $query->fetch();
 }
 
 
-/**this function is to populate description of each about me section in an editable form
+/**this function is to populate description of each about_me section in an editable form
  *
  * @param $textArray array text field from about me table
  *
  * @return string text field from about me table
  */
 function populateDescriptionForm($textArray) {
-    $results = " ";
-    foreach ($textArray as $value) {
-        $results = $value['text'];
-    }
-    return $results;
+    return $textArray['text'];
 }
 
+/**this function is to update about_me table with new data
+ *
+ * @param $db array
+ *
+ * @param &aboutText
+ *
+ * @return string
+ */
+function updateDescription($db, $oldText, $newText) {
+    $query = $db->prepare("UPDATE `about_me` SET `text` = :newText WHERE `text` = :oldText;");
+    $query->bindParam(':oldText', $oldText);
+    $query->bindParam(':newText', $newText);
+    $query->execute();
+}
 
-/**this function is to insert new data into about me table in db
+/**this function is to insert new data into about_me table in db
  *
  * @param $db array of subtitle and text to be sent to db
  *
  * @param $_POST to collect form data from index page
  *
- * @return string text to populate new row of about_me table
+ * @return string subtitle and text values to populate new row of about_me table
  */
+
+//function addAboutMeInfoToDatabase($db) {
+//    $query = $db->prepare("INSERT INTO `about_me` (`subtitle`, `text`)
+//                            VALUES ('hello', 'world');");
+//    $query->execute();
+//    return $query->fetchAll();
+//}
+//
 //function addAboutMeInfoToDatabase($db, $_POST) {
 //    $query = $db->prepare("INSERT INTO `about_me` (`subtitle`, `text`)
 //                            VALUES (:subtitle, :text);");
@@ -73,8 +94,24 @@ function populateDescriptionForm($textArray) {
 //    $query->bindParam($_POST ['subtitle']);
 //    $query->bindParam($_POST ['text']);
 //    $query->execute([$subtitle, $text]);
-//    return ();
 //}
+//
+
+
+/**this function
+ *
+ * @param $aboutMeArray
+ * @return string
+ */
+//function postAboutMeInfoToDatabase($aboutMeArray) {
+//    $results = " ";
+//    foreach ($aboutMeArray as $value) {
+//        $results = $value['subtitle']['text'];
+//    }
+//    return $results;
+//}
+
+
 
 //function addAboutMeInfoToDatabase($_POST, $db) {
 //    $query = $db->prepare("INSERT INTO `about_me` (`subtitle`, `text`)
