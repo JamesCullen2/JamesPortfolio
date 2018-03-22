@@ -1,24 +1,20 @@
 <?php
-
-
-/**this function is to get subtitle list for the about_me section from the database
+/**this function is to get subtitle column data from the about_me table in the database
  *
- * @param $db array of subtitle field from about me table from db
+ * @param $db array data to be selected from
  *
- * @return array of subtitle field
+ * @return array of subtitle column values
  */
 function getAboutMeSubtitleFromDatabase($db) {
     $query = $db->prepare("SELECT `id`,`subtitle` FROM `about_me` WHERE `deleted` = 0;");
     $query->execute();
     return $query->fetchAll();
 }
-
-
-/**this function is to return the names of each subtitle in about_me section into a drop-down list
+/**this function is to return the values of each subtitle in about_me section into a drop-down form
  *
- * @param $subtitleArray array of values in subtitle field from about me table
+ * @param $subtitleArray array of all values in subtitle field from about_me table
  *
- * @return string the name of each subtitle
+ * @return string of all subtitles
  */
 function listingSubtitles($subtitleArray) {
     $results = " ";
@@ -27,13 +23,13 @@ function listingSubtitles($subtitleArray) {
     }
     return $results;
 }
-
-
-/**this function is to get text field from about_me table in db
+/**this function is to get text column from about_me table in db
  *
- * @param $db array about me table from portfolio database
+ * @param $db array data to be selected from
  *
- * @return mixed array of text field from about me table
+ * @param $id mixed data to be selected from
+ *
+ * @return mixed text field from about_me table
  */
 function getAboutMeDescriptionFromDatabase($db, $id) {
     $query = $db->prepare("SELECT `id`, `text`,`subtitle` 
@@ -43,8 +39,6 @@ function getAboutMeDescriptionFromDatabase($db, $id) {
     $query->execute();
     return $query->fetch();
 }
-
-
 /**this function is to return text field value of about_me section
  *
  * @param $textArray array of text field from about me table
@@ -54,14 +48,13 @@ function getAboutMeDescriptionFromDatabase($db, $id) {
 function populateDescriptionForm($textArray) {
     return $textArray['text'];
 }
-
 /**this function is to edit current data with new data
  *
- * @param $db array of current data in db
+ * @param $db array data to be selected from
  *
- * @param $oldText current data
+ * @param $oldText string current data
  *
- * @param $newText edited data
+ * @param $newText string edited data
  *
  * @return string of new text to about_me table
  */
@@ -71,18 +64,16 @@ function updateDescription($db, $oldText, $newText) {
     $query->bindParam(':newText', $newText);
     $query->execute();
 }
-
 /**this function is to insert new data into about_me table in db
  *
- * @param $db array of subtitle and text to be sent to db
+ * @param $db array of subtitles and text to be sent to db
  *
- * @param $newSubtitle subtitle to be sent to db
+ * @param $newSubtitle string subtitle to be sent to db
  *
- * @param $newDescription text description to be sent to db
+ * @param $newDescription string text description to be sent to db
  *
  * @return  string of subtitle and text values to populate new row of about_me table
  */
-
 function addAboutMe($db, $newSubtitle, $newDescription) {
     $query = $db->prepare("INSERT INTO `about_me` (`subtitle`,`text`)
                             VALUES (:newSubtitle,:newDescription);");
@@ -90,13 +81,11 @@ function addAboutMe($db, $newSubtitle, $newDescription) {
     $query->bindParam(':newDescription', $newDescription);
     $query->execute();
 }
-
-
-/**this function is to delete data from about_me section
+/**this function is to delete data from about_me table
  *
  * @param $db array of subtitle and text from db
  *
- * @param $oldSection string of text pulled from db as description
+ * @param $id mixed data to be selected from
  *
  * @return string of old text deleted from db
  *
@@ -107,27 +96,4 @@ function deleteAboutMeSection($db, $id) {
     $query->bindParam(':id', $id);
     $query->execute();
 }
-
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
