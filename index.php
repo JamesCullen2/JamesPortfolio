@@ -25,6 +25,11 @@ if($_POST['newSubtitle'] != NULL && $_POST['newDescription'] != NULL) {
     addAboutMe($db, $newSubtitle, $newDescription);
 }
 
+if($_POST['oldSection'] != NULL) {
+    $oldSection = $_POST['oldSection'];
+    deleteAboutMeSection($db, $oldSection);
+}
+
 $subtitleArray = getAboutMeSubtitleFromDatabase($db);
 
 ?>
@@ -70,13 +75,19 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
     <div>
         <h2>About Me</h2>
         <h2>Delete</h2>
-        <form id="addAboutMe" method="post" action="admin.php">
-            <label for="subtitle">Subtitle</label>
-            <input type="text" name="subtitle">
-            <br><br>
-            <textarea rows="25" cols="50" name="text" form="addAboutMe">
+        <form method="post" action="index.php">
+            <select name="subtitleId">
+                <?php echo listingSubtitles($subtitleArray) ?>
+            </select>
+            <input type='submit' value='Get'>
+        </form>
+        <br><br>
+        <form method="post" action="index.php">
+            <textarea rows="25" cols="50" name="oldSection">
+                <?php echo populateDescriptionForm($textArray) ?>
             </textarea>
-            <input type="submit" name="submitNew" value="Add">
+            <input type="submit" value="Delete">
+            <input name="Delete" type="submit" value="Delete">
         </form>
     </div>
 </body>
