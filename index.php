@@ -39,7 +39,6 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
 <head>
     <title>James Cullen Portfolio CMS</title>
 </head>
-
 <body>
     <div>
     <h2>About Me</h2>
@@ -58,7 +57,6 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
             <input type="submit" value="Apply">
         </form>
     </div>
-
     <div>
         <h2>About Me</h2>
         <h2>Add</h2>
@@ -71,11 +69,10 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
             <input type="submit" value="Add">
         </form>
     </div>
-
     <div>
         <h2>About Me</h2>
         <h2>Delete</h2>
-        <form method="post" action="index.php">
+        <form id="deleteAboutMe" method="post" action="index.php">
             <select name="deleteSection">
                 <?php echo listingSubtitles($subtitleArray) ?>
             </select>
