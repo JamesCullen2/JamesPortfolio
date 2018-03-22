@@ -1,7 +1,7 @@
 <?php
 
 
-/**this function is to get subtitle data for the about_me section from the database
+/**this function is to get subtitle list for the about_me section from the database
  *
  * @param $db array of subtitle field from about me table from db
  *
@@ -107,74 +107,6 @@ function deleteAboutMeSection($db, $id) {
     $query->bindParam(':id', $id);
     $query->execute();
 }
-
-//function addAboutMeInfoToDatabase($db) {
-//    $query = $db->prepare("INSERT INTO `about_me` (`subtitle`, `text`)
-//                            VALUES ('hello', 'world');");
-//    $query->execute();
-//    return $query->fetchAll();
-//}
-//
-//function addAboutMeInfoToDatabase($db, $_POST) {
-//    $query = $db->prepare("INSERT INTO `about_me` (`subtitle`, `text`)
-//                            VALUES (:subtitle, :text);");
-//    $subtitle = '?';
-//    $text = '?';
-//    $query->bindParam($_POST ['subtitle']);
-//    $query->bindParam($_POST ['text']);
-//    $query->execute([$subtitle, $text]);
-//}
-//
-
-
-/**this function
- *
- * @param $aboutMeArray
- * @return string
- */
-//function postAboutMeInfoToDatabase($aboutMeArray) {
-//    $results = " ";
-//    foreach ($aboutMeArray as $value) {
-//        $results = $value['subtitle']['text'];
-//    }
-//    return $results;
-//}
-
-
-
-//function addAboutMeInfoToDatabase($_POST, $db) {
-//    $query = $db->prepare("INSERT INTO `about_me` (`subtitle`, `text`)
-//                            VALUES (:subtitle, :text);");
-//    $query->bindValue(':subtitle', $_POST['subtitle']);
-//    $query->bindValue(':text', $_POST['text']);
-//    $query->execute();
-//}
-
-//function postAboutMeInfoToDatabase($aboutMeArray) {
-//    $results = " ";
-//    foreach ($aboutMeArray as $value) {
-//        $results = $value['subtitle']['text'];
-//    }
-//    return $results;
-//}
-
-
-
-
-/**this function is to make sure the relevant text is populated according to subtitle selected in listingSubtitles
- *
- * @param
- *
- * @return string text in same row of chosen subtitle
- */
-
-//function subtitleToTextLink($db, $_POST) {
-//    $results = " ";
-//    if($subtitleArray = "my background") {
-//        return
-//    }
-//}
-
 
 ?>
 
