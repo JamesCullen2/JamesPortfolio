@@ -45,9 +45,9 @@ function getAboutMeDescriptionFromDatabase($db, $id) {
 }
 
 
-/**this function is to populate description of each about_me section in an editable form
+/**this function is to return text field value of about_me section
  *
- * @param $textArray array text field from about me table
+ * @param $textArray array of text field from about me table
  *
  * @return string text field from about me table
  */
@@ -55,13 +55,15 @@ function populateDescriptionForm($textArray) {
     return $textArray['text'];
 }
 
-/**this function is to update about_me table with new data
+/**this function is to edit current data with new data
  *
- * @param $db array
+ * @param $db array of current data in db
  *
- * @param &aboutText
+ * @param $oldText current data
  *
- * @return string
+ * @param $newText edited data
+ *
+ * @return string of new text to about_me table
  */
 function updateDescription($db, $oldText, $newText) {
     $query = $db->prepare("UPDATE `about_me` SET `text` = :newText WHERE `text` = :oldText;");
@@ -74,10 +76,21 @@ function updateDescription($db, $oldText, $newText) {
  *
  * @param $db array of subtitle and text to be sent to db
  *
- * @param $_POST to collect form data from index page
+ * @param $newSubtitle subtitle to be sent to db
  *
- * @return string subtitle and text values to populate new row of about_me table
+ * @param $newDescription text description to be sent to db
+ *
+ * @return  string of subtitle and text values to populate new row of about_me table
  */
+
+function addAboutMe($db, $newSubtitle, $newDescription) {
+    $query = $db->prepare("INSERT INTO `about_me` (`subtitle`,`text`)
+                            VALUES (:newSubtitle,:newDescription);");
+    $query->bindParam(':newSubtitle', $newSubtitle);
+    $query->bindParam(':newDescription', $newDescription);
+    $query->execute();
+}
+
 
 //function addAboutMeInfoToDatabase($db) {
 //    $query = $db->prepare("INSERT INTO `about_me` (`subtitle`, `text`)
