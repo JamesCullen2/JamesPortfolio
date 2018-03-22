@@ -1,5 +1,19 @@
 <?php
 
+session_start();
+
+//require ('admin.php');
+//require ('index.php');
+require ('webToDatabaseFunctions.php');
+
+$db = new PDO('mysql:host = 127.0.0.1; dbname=portfolio', 'root');
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+$getTextFromDB = getTextFromDB($db, $id);
+
+//displayText($getTextFromDB)
+var_dump($getTextFromDB);
+
 ?>
 
 <!DOCTYPE html>
@@ -32,17 +46,7 @@
     <main class="container">
         <section id="about">
                 <h1>my background</h1>
-                <p>I have been working in software development for 3 years.
-Initially, in 2015, I founded a digital tech start-up, Unity-Hub.
-The aim of the company was to develop a Web App that makes business meetings more productive.
-I secured equity investment from Webstart Bristol to develop my idea and earned a place in
-                    the first Entrepreneurial Spark incubator in Bristol. After receiving the investment I
-                    outsourced design and development work in order to prove concept and raise more investment.
-Employing the services of a front-end developer - and working alongside them - gave me a
-                    fantastic insight into coding and beyond, such as user-profiling and agile methodology.
-                    As a non-technical director, During this time, I became fascinated with the software
-                    development side of the project; I love finding solutions to problems.
-Ultimately, I decided to learn how to build software to ‘scratch my own itch’.
+                <p> <?php echo displayText($getTextFromDB) ?>
                 </p>
                 <h1>my skills</h1>
                 <p>I enrolled on the Mayden Academy software development programme in February 2018.
