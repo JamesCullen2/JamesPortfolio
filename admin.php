@@ -8,7 +8,7 @@
  * @return array of subtitle field
  */
 function getAboutMeSubtitleFromDatabase($db) {
-    $query = $db->prepare("SELECT `id`,`subtitle` FROM `about_me`;");
+    $query = $db->prepare("SELECT `id`,`subtitle` FROM `about_me` WHERE `deleted` = 0;");
     $query->execute();
     return $query->fetchAll();
 }
@@ -101,10 +101,10 @@ function addAboutMe($db, $newSubtitle, $newDescription) {
  * @return string of old text deleted from db
  *
  */
-function deleteAboutMeSection($db, $oldSection) {
-    $query = $db->prepare("DELETE FROM `about_me`
-                            WHERE `text` = :oldSection;");
-    $query->bindParam(':oldSection', $oldSection);
+function deleteAboutMeSection($db, $id) {
+    $query = $db->prepare("UPDATE `about_me`
+                            SET `deleted` = 1 WHERE `id` = :id");
+    $query->bindParam(':id', $id);
     $query->execute();
 }
 
