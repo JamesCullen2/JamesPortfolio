@@ -1,17 +1,17 @@
 <?php
 
-function getTextFromDB($db) {
-    $query = $db->prepare("SELECT `subtitle`,`text` FROM `about_me`;");
+function getTextFromDB($db, $id) {
+    $query = $db->prepare("SELECT `text` 
+                            FROM `about_me`
+                            WHERE `id` =" . $id . "
+                            GROUP BY `text`;");
     $query->execute();
     return $query->fetchAll();
 }
 
 function displayText($getTextFromDB) {
-    return $getTextFromDB ['subtitle']; 
+    return $getTextFromDB['text'];
 }
-/**
- * Created by PhpStorm.
- * User: James
- * Date: 22/03/2018
- * Time: 15:28
- */
+
+
+
