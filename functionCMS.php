@@ -1,11 +1,11 @@
 <?php
 /**to get subtitle column data from the about_me table in the database
  *
- * @param $db array data to be selected from
+ * @param $db PDO data to be selected from
  *
  * @return array of subtitle column values
  */
-function getAboutMeSubtitleFromDatabase($db) {
+function getAboutMeSubtitleFromDatabase(PDO $db) {
     $query = $db->prepare("SELECT `id`,`subtitle` FROM `about_me` WHERE `deleted` = 0;");
     $query->execute();
     return $query->fetchAll();
@@ -17,7 +17,7 @@ function getAboutMeSubtitleFromDatabase($db) {
  *
  * @return string of  subtitles
  */
-function listingSubtitles($subtitleArray) {
+function listingSubtitles(array $subtitleArray) :string {
     $results = " ";
     foreach ($subtitleArray as $value) {
         $results .=  "<option value='" . $value['id'] . "'>" . $value['subtitle'] . "</option>";
@@ -27,12 +27,12 @@ function listingSubtitles($subtitleArray) {
 
 /**to get text column from about_me table in db
  *
- * @param $db array data to be selected from
- * @param $id int data to be selected from
+ * @param $db PDO data to be selected from
+ * @param $id string data to be selected from
  *
  * @return string text field from about_me table
  */
-function getAboutMeDescriptionFromDatabase($db, $id) {
+function getAboutMeDescriptionFromDatabase(PDO $db, string $id) {
     $query = $db->prepare("SELECT `id`, `text`,`subtitle` 
                             FROM `about_me` 
                             WHERE `id` =" . $id . " 
@@ -45,7 +45,7 @@ function getAboutMeDescriptionFromDatabase($db, $id) {
  *
  * @param $textArray array of text field from about me table
  *
- * @return array text field from about me table
+ * @return string text field from about me table
  */
 function populateDescriptionForm($textArray) {
     return $textArray['text'];
@@ -53,13 +53,13 @@ function populateDescriptionForm($textArray) {
 
 /**to edit current data with new data
  *
- * @param $db array data to be selected from
+ * @param $db PDO data to be selected from
  * @param $oldText array current data
  * @param $newText array edited data
  *
- * @return array of new text to about_me table
+ * @return string of new text to about_me table
  */
-function updateDescription($db, $oldText, $newText) {
+function updateDescription(PDO $db, $oldText, $newText) {
     $query = $db->prepare("UPDATE `about_me` SET `text` = :newText WHERE `text` = :oldText;");
     $query->bindParam(':oldText', $oldText);
     $query->bindParam(':newText', $newText);
@@ -68,13 +68,13 @@ function updateDescription($db, $oldText, $newText) {
 
 /**to insert new data into about_me table in db
  *
- * @param $db array of subtitles and text to be sent to db
+ * @param $db PDO of subtitles and text to be sent to db
  * @param $newSubtitle array subtitle to be sent to db
  * @param $newDescription array text description to be sent to db
  *
- * @return  array of subtitle and text values to populate new row of about_me table
+ * @return  string of subtitle and text values to populate new row of about_me table
  */
-function addAboutMe($db, $newSubtitle, $newDescription) {
+function addAboutMe(PDO $db, $newSubtitle, $newDescription) {
     $query = $db->prepare("INSERT INTO `about_me` (`subtitle`,`text`)
                             VALUES (:newSubtitle,:newDescription);");
     $query->bindParam(':newSubtitle', $newSubtitle);
@@ -84,14 +84,14 @@ function addAboutMe($db, $newSubtitle, $newDescription) {
 
 /**to delete data from about_me table
  *
- * @param $db array of subtitle and text from db
+ * @param $db PDO of subtitle and text from db
  *
- * @param $id mixed data to be selected from
+ * @param $id string data to be selected from
  *
  * @return mixed old text deleted from db
  *
  */
-function deleteAboutMeSection($db, $id) {
+function deleteAboutMeSection(PDO $db, string $id) {
     $query = $db->prepare("UPDATE `about_me`
                             SET `deleted` = 1 WHERE `id` = :id");
     $query->bindParam(':id', $id);
