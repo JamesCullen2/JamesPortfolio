@@ -2,7 +2,7 @@
 
 session_start();
 
-require ('webToDatabaseFunctions.php');
+require('functionIndex.php');
 
 $db = new PDO('mysql:host = 127.0.0.1; dbname=portfolio', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -96,10 +96,3 @@ We are blessed with many great friends and family whom we share time with regula
     </footer>
 </body>
 </html>
-
-/**
- * Created by PhpStorm.
- * User: James
- * Date: 22/03/2018
- * Time: 14:13
- */
