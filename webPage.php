@@ -2,18 +2,13 @@
 
 session_start();
 
-//require ('admin.php');
-//require ('index.php');
 require ('webToDatabaseFunctions.php');
 
 $db = new PDO('mysql:host = 127.0.0.1; dbname=portfolio', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
+$getSubtitleFromDB = getSubtitleFromDB($db, 1);
 $getTextFromDB = getTextFromDB($db, 1);
-
-//var_dump($getTextFromDB);
-
-
 
 ?>
 
@@ -46,8 +41,8 @@ $getTextFromDB = getTextFromDB($db, 1);
     </header>
     <main class="container">
         <section id="about">
-                <h1>my background</h1>
-                <p> <?php echo displayText($getTextFromDB) ?>
+                <h1> <?php echo displaySubtitle($getSubtitleFromDB) ?></h1>
+                <p> <?php echo displayTextFromDB($getTextFromDB) ?>
                 </p>
                 <h1>my skills</h1>
                 <p>I enrolled on the Mayden Academy software development programme in February 2018.
