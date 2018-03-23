@@ -5,7 +5,7 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 function getTextFromDB($db, $id) {
     $query = $db->prepare("SELECT `text` 
                             FROM `about_me`
-                            WHERE `id` =" . $id . "
+                            WHERE `id` = " . $id . "
                             GROUP BY `text`;");
     $query->execute();
     return $query->fetchAll();
