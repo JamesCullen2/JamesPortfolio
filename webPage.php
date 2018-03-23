@@ -11,7 +11,7 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 $getTextFromDB = getTextFromDB($db, 1);
 
-var_dump($getTextFromDB);
+//var_dump($getTextFromDB);
 
 
 
