@@ -1,100 +1,83 @@
 <?php
-/**to get subtitle column data from the about_me table in the database
- *
- * @param $db array data to be selected from
- *
- * @return array of subtitle column values
- */
-function getAboutMeSubtitleFromDatabase($db) :array {
-    $query = $db->prepare("SELECT `id`,`subtitle` FROM `about_me` WHERE `deleted` = 0;");
-    $query->execute();
-    return $query->fetchAll();
+session_start();
+
+require ('admin.php');
+
+$db = new PDO('mysql:host = 127.0.0.1; dbname=portfolio', 'root');
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+
+if($_POST['subtitleId'] != NULL) {
+    $id = $_POST['subtitleId'];
+    $textArray = getAboutMeDescriptionFromDatabase($db, $id);
+    $_SESSION['oldText'] = populateDescriptionForm($textArray);
 }
 
-/**to return the values of each subtitle in about_me section into a drop-down form
- *
- * @param $subtitleArray int of all values in subtitle field from about_me table
- *
- * @return string of all subtitles
- */
-function listingSubtitles($subtitleArray) {
-    $results = " ";
-    foreach ($subtitleArray as $value) {
-        $results .=  "<option value='" . $value['id'] . "'>" . $value['subtitle'] . "</option>";
-    }
-    return $results;
+if($_POST['newText'] != NULL && $_SESSION['oldText'] != NULL) {
+    $newText = $_POST['newText'];
+    $oldText = $_SESSION['oldText'];
+    updateDescription($db, $oldText, $newText);
 }
 
-/**to get text column from about_me table in db
- *
- * @param $db array data to be selected from
- * @param $id mixed data to be selected from
- *
- * @return mixed text field from about_me table
- */
-function getAboutMeDescriptionFromDatabase($db, $id) {
-    $query = $db->prepare("SELECT `id`, `text`,`subtitle` 
-                            FROM `about_me` 
-                            WHERE `id` =" . $id . " 
-                            GROUP BY `text`;");
-    $query->execute();
-    return $query->fetch();
+if($_POST['newSubtitle'] != NULL && $_POST['newDescription'] != NULL) {
+    $newSubtitle = $_POST['newSubtitle'];
+    $newDescription = $_POST['newDescription'];
+    addAboutMe($db, $newSubtitle, $newDescription);
 }
 
-/**to return text field value of about_me section
- *
- * @param $textArray array of text field from about me table
- *
- * @return string text field from about me table
- */
-function populateDescriptionForm($textArray) {
-    return $textArray['text'];
+if($_POST['deleteSection'] != NULL) {
+    $id = $_POST['deleteSection'];
+    deleteAboutMeSection($db, $id);
 }
 
-/**to edit current data with new data
- *
- * @param $db array data to be selected from
- * @param $oldText string current data
- * @param $newText string edited data
- *
- * @return string of new text to about_me table
- */
-function updateDescription($db, $oldText, $newText) {
-    $query = $db->prepare("UPDATE `about_me` SET `text` = :newText WHERE `text` = :oldText;");
-    $query->bindParam(':oldText', $oldText);
-    $query->bindParam(':newText', $newText);
-    $query->execute();
-}
+$subtitleArray = getAboutMeSubtitleFromDatabase($db);
 
-/**to insert new data into about_me table in db
- *
- * @param $db array of subtitles and text to be sent to db
- * @param $newSubtitle string subtitle to be sent to db
- * @param $newDescription string text description to be sent to db
- *
- * @return  string of subtitle and text values to populate new row of about_me table
- */
-function addAboutMe($db, $newSubtitle, $newDescription) {
-    $query = $db->prepare("INSERT INTO `about_me` (`subtitle`,`text`)
-                            VALUES (:newSubtitle,:newDescription);");
-    $query->bindParam(':newSubtitle', $newSubtitle);
-    $query->bindParam(':newDescription', $newDescription);
-    $query->execute();
-}
-
-/**to delete data from about_me table
- *
- * @param $db array of subtitle and text from db
- *
- * @param $id mixed data to be selected from
- *
- * @return string of old text deleted from db
- *
- */
-function deleteAboutMeSection($db, $id) {
-    $query = $db->prepare("UPDATE `about_me`
-                            SET `deleted` = 1 WHERE `id` = :id");
-    $query->bindParam(':id', $id);
-    $query->execute();
-}
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>James Cullen Portfolio CMS</title>
+</head>
+<body>
+    <div>
+        <h1>James Cullen: Portfolio Content Management System</h1>
+        <h2>About Me Section</h2>
+        <h2>Edit</h2>
+        <form id="editAboutMe" action="index.php" method="post">
+            <select name="subtitleId">
+                <?php echo listingSubtitles($subtitleArray) ?>
+            </select>
+            <input type='submit' value='Get'>
+        </form>
+        <br><br>
+        <form method="post" action="index.php">
+            <textarea rows="25" cols="50" name="newText">
+                <?php echo populateDescriptionForm($textArray) ?>
+            </textarea>
+            <input type="submit" value="Apply">
+        </form>
+    </div>
+    <div>
+        <h2>Add</h2>
+        <form id="addAboutMe" method="post" action="index.php">
+            <label for="subtitle">Subtitle</label>
+            <input type="text" name="newSubtitle">
+            <br><br>
+            <textarea rows="25" cols="50" name="newDescription">
+            </textarea>
+            <input type="submit" value="Add">
+        </form>
+    </div>
+    <div>
+        <h2>Delete</h2>
+        <form id="deleteAboutMe" method="post" action="index.php">
+            <select name="deleteSection">
+                <?php echo listingSubtitles($subtitleArray) ?>
+            </select>
+            <input type='submit' value='Delete'>
+        </form>
+        <br><br>
+    </div>
+</body>
+</html>
