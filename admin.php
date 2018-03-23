@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require ('admin.php');
+require('functionCMS.php');
 
 $db = new PDO('mysql:host = 127.0.0.1; dbname=portfolio', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -44,14 +44,14 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
         <h1>James Cullen: Portfolio Content Management System</h1>
         <h2>About Me Section</h2>
         <h2>Edit</h2>
-        <form id="editAboutMe" action="index.php" method="post">
+        <form id="editAboutMe" action="admin.php" method="post">
             <select name="subtitleId">
                 <?php echo listingSubtitles($subtitleArray) ?>
             </select>
             <input type='submit' value='Get'>
         </form>
         <br><br>
-        <form method="post" action="index.php">
+        <form method="post" action="admin.php">
             <textarea rows="25" cols="50" name="newText">
                 <?php echo populateDescriptionForm($textArray) ?>
             </textarea>
@@ -60,7 +60,7 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
     </div>
     <div>
         <h2>Add</h2>
-        <form id="addAboutMe" method="post" action="index.php">
+        <form id="addAboutMe" method="post" action="admin.php">
             <label for="subtitle">Subtitle</label>
             <input type="text" name="newSubtitle">
             <br><br>
@@ -71,7 +71,7 @@ $subtitleArray = getAboutMeSubtitleFromDatabase($db);
     </div>
     <div>
         <h2>Delete</h2>
-        <form id="deleteAboutMe" method="post" action="index.php">
+        <form id="deleteAboutMe" method="post" action="admin.php">
             <select name="deleteSection">
                 <?php echo listingSubtitles($subtitleArray) ?>
             </select>
