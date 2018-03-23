@@ -5,7 +5,7 @@
  *
  * @return array of subtitle column values
  */
-function getAboutMeSubtitleFromDatabase(array $db) :array {
+function getAboutMeSubtitleFromDatabase($db) {
     $query = $db->prepare("SELECT `id`,`subtitle` FROM `about_me` WHERE `deleted` = 0;");
     $query->execute();
     return $query->fetchAll();
@@ -17,7 +17,7 @@ function getAboutMeSubtitleFromDatabase(array $db) :array {
  *
  * @return string of  subtitles
  */
-function listingSubtitles(array $subtitleArray) :string {
+function listingSubtitles($subtitleArray) {
     $results = " ";
     foreach ($subtitleArray as $value) {
         $results .=  "<option value='" . $value['id'] . "'>" . $value['subtitle'] . "</option>";
@@ -30,9 +30,9 @@ function listingSubtitles(array $subtitleArray) :string {
  * @param $db array data to be selected from
  * @param $id int data to be selected from
  *
- * @return mixed text field from about_me table
+ * @return string text field from about_me table
  */
-function getAboutMeDescriptionFromDatabase($db, array $id) :string {
+function getAboutMeDescriptionFromDatabase($db, $id) {
     $query = $db->prepare("SELECT `id`, `text`,`subtitle` 
                             FROM `about_me` 
                             WHERE `id` =" . $id . " 
@@ -45,19 +45,19 @@ function getAboutMeDescriptionFromDatabase($db, array $id) :string {
  *
  * @param $textArray array of text field from about me table
  *
- * @return mixed text field from about me table
+ * @return array text field from about me table
  */
-function populateDescriptionForm(array $textArray) :string {
+function populateDescriptionForm($textArray) {
     return $textArray['text'];
 }
 
 /**to edit current data with new data
  *
  * @param $db array data to be selected from
- * @param $oldText string current data
- * @param $newText string edited data
+ * @param $oldText array current data
+ * @param $newText array edited data
  *
- * @return string of new text to about_me table
+ * @return array of new text to about_me table
  */
 function updateDescription($db, $oldText, $newText) {
     $query = $db->prepare("UPDATE `about_me` SET `text` = :newText WHERE `text` = :oldText;");
@@ -69,10 +69,10 @@ function updateDescription($db, $oldText, $newText) {
 /**to insert new data into about_me table in db
  *
  * @param $db array of subtitles and text to be sent to db
- * @param $newSubtitle string subtitle to be sent to db
- * @param $newDescription string text description to be sent to db
+ * @param $newSubtitle array subtitle to be sent to db
+ * @param $newDescription array text description to be sent to db
  *
- * @return  string of subtitle and text values to populate new row of about_me table
+ * @return  array of subtitle and text values to populate new row of about_me table
  */
 function addAboutMe($db, $newSubtitle, $newDescription) {
     $query = $db->prepare("INSERT INTO `about_me` (`subtitle`,`text`)
@@ -88,7 +88,7 @@ function addAboutMe($db, $newSubtitle, $newDescription) {
  *
  * @param $id mixed data to be selected from
  *
- * @return string of old text deleted from db
+ * @return mixed old text deleted from db
  *
  */
 function deleteAboutMeSection($db, $id) {
