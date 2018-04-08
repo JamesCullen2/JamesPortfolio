@@ -56,6 +56,11 @@ section {
     max-width: 150px;
 }
 
+.image-icon-game {
+    max-width: 150px;
+    max-height: 150px;
+}
+
 .footer-nav-bar {
     float: left;
     margin: 0 auto;
