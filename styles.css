@@ -7,24 +7,20 @@ body {
     font-family: Courier, sans-serif;
 }
 
-header {
-    background-image: url("mobile_code_image.jpg");
+nav {
+    background-color: #000000;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100px;
+    position: fixed;
+    overflow: hidden;
 }
 
 .container {
     margin: 0 auto;
     width: 80%;
-}
-
-.nav-main {
-    position: fixed;
-    overflow: hidden;
 }
 
 li {
@@ -83,9 +79,7 @@ section {
 /*Tablet */
 
 @media only screen and (min-width: 600px) {
-    header {
-        background-image: url("tablet_code_image.jpg");
-    }
+
     li {
         margin-right: 10px;
         text-align: left;
@@ -104,9 +98,6 @@ section {
 /* Desktop */
 
 @media only screen and (min-width: 1200px) {
-    header {
-        background-image: url("large_code_skills.jpg");
-    }
 
     li {
         float: right;
