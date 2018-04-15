@@ -18,13 +18,13 @@ nav {
     overflow: hidden;
 }
 
-.carousel {
-    height: 100vh;
-}
-
 .container {
     margin: 0 auto;
     width: 80%;
+}
+
+.slick-slide{
+    margin:10px;
 }
 
 li {
