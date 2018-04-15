@@ -23,6 +23,10 @@ nav {
     width: 80%;
 }
 
+.slick-slide{
+    margin:10px;
+}
+
 li {
     list-style: none;
     margin-right: 10px;
