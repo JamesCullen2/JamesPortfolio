@@ -5,6 +5,7 @@
 body {
     margin: 0;
     font-family: Courier, sans-serif;
+    background-color: #EBEBEB;
 }
 
 nav {
@@ -18,13 +19,26 @@ nav {
     overflow: hidden;
 }
 
+header {
+    height: 100vh;
+    background-color: #FF6700;
+}
+
 .container {
     margin: 0 auto;
     width: 80%;
 }
 
-.slick-slide{
+/*.carousel {*/
+    /*background-color: #EBEBEB;*/
+/*}*/
+
+.slick-slide {
     margin:10px;
+}
+
+.slick-slide img {
+    width: 100%;
 }
 
 li {
@@ -125,3 +139,11 @@ section {
         width: 30%;
     }
 }
+
+
+/*colours:*/
+/*#FF6700*/
+/*#EBEBEB*/
+/*#C0C0C0*/
+/*#3A6EA5*/
+/*#00539F*/
