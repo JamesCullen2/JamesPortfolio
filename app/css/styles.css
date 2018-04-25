@@ -24,6 +24,13 @@ header {
     background-color: #FF6700;
 }
 
+.title {
+    text-align: center;
+    display: block;
+    padding: 100px;
+    color: #EBEBEB;
+}
+
 .container {
     margin: 0 auto;
     width: 80%;
