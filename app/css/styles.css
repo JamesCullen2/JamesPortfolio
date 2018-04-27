@@ -4,12 +4,11 @@
 
 body {
     margin: 0;
-    font-family: Courier, sans-serif;
     background-color: #EBEBEB;
 }
 
 nav {
-    background-color: #000000;
+    background-color: #FF6700;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,18 +16,28 @@ nav {
     height: 100px;
     position: fixed;
     overflow: hidden;
+    top: 0px;
 }
 
 header {
     height: 100vh;
-    background-color: #FF6700;
+    background-color: #000000;
 }
 
 .title {
-    text-align: center;
-    display: block;
-    padding: 100px;
+    text-align: right;
+    display: inline-block;
+    padding: 125px 20px;
     color: #EBEBEB;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    width: ;
+}
+
+.hero {
+    display: inline-block;
+    float: left;
+    padding: 125px 0;
 }
 
 .container {
