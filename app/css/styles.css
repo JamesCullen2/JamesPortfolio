@@ -72,11 +72,9 @@ section {
 
 .image-icons {
     max-width: 150px;
-}
-
-.image-icon-game {
-    max-width: 150px;
-    max-height: 150px;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
 }
 
 .footer-nav-bar {
