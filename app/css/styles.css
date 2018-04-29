@@ -16,7 +16,7 @@ nav {
     height: 100px;
     position: fixed;
     overflow: hidden;
-    top: 0px;
+    top: 0;
 }
 
 header {
@@ -31,30 +31,17 @@ header {
     color: #EBEBEB;
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
-    width: ;
 }
 
 .hero {
     display: inline-block;
     float: left;
-    padding: 125px 0;
+    padding: 150px 0 0 10px;
 }
 
 .container {
     margin: 0 auto;
     width: 80%;
-}
-
-/*.carousel {*/
-    /*background-color: #EBEBEB;*/
-/*}*/
-
-.slick-slide {
-    margin:10px;
-}
-
-.slick-slide img {
-    width: 100%;
 }
 
 li {
@@ -80,6 +67,7 @@ li {
 section {
     min-height: 100vh;
     padding: 0 20px;
+    text-align: justify;
 }
 
 .image-icons {
