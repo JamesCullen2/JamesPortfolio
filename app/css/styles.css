@@ -5,6 +5,20 @@
 body {
     margin: 0;
     background-color: #EBEBEB;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1em;
 }
 
 nav {
@@ -22,26 +36,32 @@ nav {
 header {
     height: 100vh;
     background-color: #000000;
+    color: #C0C0C0;
+    text-align: center;
 }
 
 .title {
-    text-align: right;
+    position: relative;
+    text-align: left;
     display: inline-block;
-    padding: 125px 20px;
-    color: #EBEBEB;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
+    color: #00539F;
+    padding-left: 10px;
 }
 
 .hero {
     display: inline-block;
-    float: left;
-    padding: 150px 0 0 10px;
+    padding: 150px 20px 0 20px;
 }
 
 .container {
     margin: 0 auto;
     width: 80%;
+}
+
+ul {
+    display: inline-block;
+    float: right;
+    color: #00539F;
 }
 
 li {
@@ -72,9 +92,9 @@ section {
 
 .image-icons {
     max-width: 150px;
-    display: block;
-    margin: 0 auto;
-    width: 50%;
+    /*display: block;*/
+    /*margin: 0 auto;*/
+    /*width: 50%;*/
 }
 
 .footer-nav-bar {
@@ -144,8 +164,8 @@ section {
 
 
 /*colours:*/
-/*#FF6700*/
-/*#EBEBEB*/
-/*#C0C0C0*/
-/*#3A6EA5*/
-/*#00539F*/
+/*#FF6700 orange*/
+/*#EBEBEB silver*/
+/*#C0C0C0 dark silver*/
+/*#3A6EA5 blue*/
+/*#00539F darker blue*/
