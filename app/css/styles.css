@@ -9,8 +9,8 @@ body {
 }
 
 h1 {
-
     font-size: 3em;
+    margin: 10px 0 10px;
 }
 
 h2 {
@@ -49,8 +49,8 @@ header {
 }
 
 .hero {
-    display: inline-block;
-    padding: 150px 20px 0 20px;
+    display: block;
+    padding-top: 150px;
 }
 
 .container {
@@ -85,13 +85,38 @@ li {
 }
 
 section {
-    min-height: 100vh;
     padding: 0 20px;
+    min-height: 100vh;
+}
+
+.text {
     text-align: justify;
+    display: none;
+}
+
+button {
+    background-color: #3A6EA5;
+    border: solid thin;
+    border-radius: 15px;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 2em;
+    margin: 10px;
+    color: #C0C0C0;
+    font-style: normal;
+}
+
+.about {
+    padding-top: 20px;
+}
+
+.aboutMe {
+    display: inline-block;
 }
 
 .image-icons {
     max-width: 150px;
+    display: none;
     /*display: block;*/
     /*margin: 0 auto;*/
     /*width: 50%;*/
@@ -113,7 +138,6 @@ section {
     position: relative;
     display: inline-block;
     width: 80%;
-    min-height: 30vh;
 }
 
 /*Tablet */

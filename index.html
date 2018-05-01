@@ -18,14 +18,23 @@
 <body>
     <header>
         <h1 class="hero">James Cullen</h1>
-        <img class="hero" src="app/images/contact-icon-linkedin.png" />
+        <a href="https://github.com/JamesCullen2">
+            <img src="app/images/github_icon_mobile.png" alt="James Cullen Github"/>
+        </a>
+        <a href="https://www.linkedin.com/in/jamescullen1/">
+            <img src="app/images/linkedin_icon_mobile.png" alt="James Cullen Linkedin"/>
+        </a>
     </header>
 
     <main class="container">
 
       <section id="about">
-                <h2>my background</h2>
-                <p>I have been working in software development for 3 years.
+                <div class="about">
+                    <img src="app/images/avatar.png">
+                    <h1 class="aboutMe" >about me</h1>
+                </div>
+                <button>my background</button>
+                <p class="text">I have been working in software development for 3 years.
                     Initially, in 2015, I founded a digital tech start-up, Unity-Hub.
                     The aim of the company was to develop a Web App that makes business meetings more productive.
                     I secured equity investment from Webstart Bristol to develop my idea and earned a place in
@@ -37,13 +46,13 @@
                     development side of the project; I love finding solutions to problems.
                     Ultimately, I decided to learn how to build software to ‘scratch my own itch’.
                 </p>
-                <h2>my skills</h2>
-                <p>I enrolled on the Mayden Academy software development programme in February 2018.
+                <button>my skills</button>
+                <p class="text">I enrolled on the Mayden Academy software development programme in February 2018.
                     This began a four month intensive course of advanced software development, including: HTML, CSS,
                     CSM, SQL, JS, MVC & PHP, Node.js and Zend.
                 </p>
-                <h2>my interests</h2>
-                <p>I am a very proud husband and father of a one year-old baby boy, Joshua! We live in Keynsham
+                <button>my interests</button>
+                <p class="text">I am a very proud husband and father of a one year-old baby boy, Joshua! We live in Keynsham
                     in the first house we have ever owned. My wife, Hannah, and I met in Mexico in 2003 while we were
                     volunteering for a charity organisation. My wife is originally from Bristol area whereas I was
                     born and raised on the Merseyside. I enjoy keeping myself fit and active; I currently play
@@ -51,39 +60,39 @@
                     We are blessed with many great friends and family whom we share time with regularly.
                 </p>
         </section>
-        <section>
-
-                <h2>back end development</h2>
+        <section id="portfolio" class="portfolio">
+                <h1>portfolio</h1>
+                <button>back end development</button>
                 <a class="image-icons" target="_blank" href="https://github.com/Mayden-Academy/aptitude-test">
                     <img src="app/images/aptitude_test_mobile.png"/>
                 </a>
-                <p>I helped to continue the build for an online quiz application for users to register
+                <p class="text">I helped to continue the build for an online quiz application for users to register
                     and take an academy aptitude test. As a team, we refactored an existing code base, including
                     bug fixes. Specifically, I worked on creating a new link between the admin page and the API
                     so that the course administrators could easily view, edit and delete participants' data.
                     For this project, I worked mainly in PHP.
                 </p>
-                <h2>front end development</h2>
+                <button>front end development</button>
                 <a class="image-icons" target="_blank" href="https://dev.maydenacademy.co.uk/projects/2018Feb/JSGame/">
                     <img src="app/images/game_mobile.png" alt="racing-Game">
                 </a>
-                <p>I helped to build an interactive game. As a team, we designed, coded and delivered
+                <p class="text">I helped to build an interactive game. As a team, we designed, coded and delivered
                     a racing-themed game for two players using keyboard controls. Specifically, I worked
                     on designing the first of two tracks and creating an ajax request that allows users to
                     view either race track before starting the game.
                     For this project, I worked mainly in JavaScript and JQuery.
                 </p>
-                <h2>web app development</h2>
+                <button>web app development</button>
                 <a class="image-icons" target="_blank" href="#">
                     <img src="app/images/web-app-image-2.png" alt="Unity-Hub">
                 </a>
-                    <p>Here's an example of UI for Unity-Hub, a digital tech start-up I founded.
-                    </p>
-                <h2>website development</h2>
+                <p class="text">Here's an example of UI for Unity-Hub, a digital tech start-up I founded.
+                </p>
+                <button>website development</button>
                 <a class="image-icons" target="_blank" href="http://oratemate.com/">
                     <img src="app/images/oratemate-website-image-1.png" alt="OrateMate Limited">
                 </a>
-                <p>Here's a website I built for my training / coaching company, OrateMate.
+                <p class="text">Here's a website I built for my training / coaching company, OrateMate.
                 </p>
         </section>
     </main>
