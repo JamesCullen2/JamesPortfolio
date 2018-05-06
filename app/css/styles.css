@@ -34,8 +34,9 @@ nav {
 }
 
 header {
-    position: relative;
+    padding-top: 15vh;
     height: 100vh;
+    background-color: #000000;
     color: #C0C0C0;
     text-align: center;
 }
@@ -45,7 +46,7 @@ header {
     text-align: left;
     display: inline-block;
     color: #00539F;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 10px;
 }
 
@@ -191,6 +192,6 @@ button {
 /*colours:*/
 /*#FF6700 orange*/
 /*#EBEBEB silver*/
-/*#C0C0C0 dark silver*/
+/* dark silver*/
 /*#3A6EA5 blue*/
 /*#00539F darker blue*/
