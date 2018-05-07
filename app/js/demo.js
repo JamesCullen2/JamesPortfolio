@@ -5,3 +5,7 @@ $("#dropButton").on('click', function (){
     })
 })
 
+$("#background").on('click', function (){
+    $("#dropdownContentMain").toggle( "slow", function () {
+    })
+})
