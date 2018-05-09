@@ -182,7 +182,7 @@ section {
     z-index: 1;
 }
 
-#dropdownContentMain {
+.dropdownBackground {
     display: none;
     position: absolute;
     background-color: #FF6700;

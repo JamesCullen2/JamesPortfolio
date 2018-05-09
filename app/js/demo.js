@@ -6,6 +6,16 @@ $("#dropButton").on('click', function (){
 })
 
 $("#background").on('click', function (){
-    $("#dropdownContentMain").toggle( "slow", function () {
+    $("#dropdownBackground").toggle( "slow", function () {
+    })
+})
+
+$("#skills").on('click', function (){
+    $("#dropdownSkills").toggle( "slow", function () {
+    })
+})
+
+$("#interests").on('click', function (){
+    $("#dropdownInterests").toggle( "slow", function () {
     })
 })
