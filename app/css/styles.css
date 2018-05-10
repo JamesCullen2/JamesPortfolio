@@ -9,16 +9,25 @@ body {
 }
 
 h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 3em;
     margin: 10px 0 10px;
 }
 
 h2 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 2em;
 }
 
-p {
+h3 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 1em;
+}
+
+p {
+    text-align: justify;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 nav {
@@ -137,67 +146,46 @@ section {
     min-height: 100vh;
 }
 
-.text {
-    text-align: justify;
-    display: none;
-}
-
-/*.mainButton {*/
-    /*background-color: #3A6EA5;*/
-    /*border: solid thin;*/
-    /*border-radius: 15px;*/
-    /*padding: 15px 32px;*/
-    /*text-align: center;*/
-    /*font-size: 2em;*/
-    /*margin: 10px;*/
-    /*color: #C0C0C0;*/
-    /*font-style: normal;*/
-    /*min-width: 234px;*/
-/*}*/
-
-.dropdownAbout {
+.dropdownAbout, .dropdownPortfolio {
     display: block;
     float: left;
     overflow: hidden;
 }
 
-.dropdownAbout .mainButton {
-    background: #FF6700;
-    border: none;
-    outline: none;
-    padding: 25px;
-    margin: 0;
+.dropdownAbout .mainButton, .dropdownPortfolio .mainButton {
+    background-color: #3A6EA5;
+    border: solid thin;
+    border-radius: 15px;
+    padding: 15px 32px;
+    text-align: center;
+    margin: 5px;
+    color: #C0C0C0;
+    font-style: normal;
+    min-width: 234px;
 }
 
-.navbar a:hover, .dropdownAbout:hover .dropbtn {
-    background-color: red;
-}
+/*.navbar a:hover, .dropdownAbout:hover .dropbtn {*/
+    /*background-color: red;*/
+/*}*/
 
-.dropdown-content {
+#dropdownBackground {
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0;
-    z-index: 1;
 }
 
-.dropdownBackground {
+#dropdownSkills {
     display: none;
-    position: absolute;
-    background-color: #FF6700;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0;
-    z-index: 1;
 }
 
-.dropdown-content a {
-    float: none;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    color: #00539F;
+#dropdownInterests {
+    display: none;
+}
+
+#dropdownTeamProjects {
+    display: none;
+}
+
+#dropdownPersonalProjects {
+    display: none;
 }
 
 .dropdown-content a:hover {
@@ -207,7 +195,6 @@ section {
 .show {
     display: block;
 }
-
 
 #backgroundText {
     display: none;
@@ -221,13 +208,13 @@ section {
     display: inline-block;
 }
 
-.image-icons {
-    max-width: 150px;
-    display: none;
+/*.image-icons {*/
+    /*max-width: 150px;*/
+    /*display: none;*/
     /*display: block;*/
     /*margin: 0 auto;*/
     /*width: 50%;*/
-}
+/*}*/
 
 .footer-nav-bar {
     position: absolute;

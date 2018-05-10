@@ -19,3 +19,13 @@ $("#interests").on('click', function (){
     $("#dropdownInterests").toggle( "slow", function () {
     })
 })
+
+$("#teamProjects").on('click', function (){
+    $("#dropdownTeamProjects").toggle( "slow", function () {
+    })
+})
+
+$("#personalProjects").on('click', function (){
+    $("#dropdownPersonalProjects").toggle( "slow", function () {
+    })
+})
