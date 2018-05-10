@@ -40,13 +40,13 @@ nav a {
     text-align: center;
 }
 
-.dropdown {
+.dropdownNav {
     display: inline-block;
     float: right;
     overflow: hidden;
 }
 
-.dropdown .dropButton {
+.dropdownNav .dropButton {
     background: #FF6700;
     border: none;
     outline: none;
@@ -54,7 +54,7 @@ nav a {
     margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdownNav:hover .dropbtn {
     background-color: red;
 }
 
@@ -155,13 +155,13 @@ section {
     /*min-width: 234px;*/
 /*}*/
 
-.dropdown {
-    display: inline-block;
-    float: right;
+.dropdownAbout {
+    display: block;
+    float: left;
     overflow: hidden;
 }
 
-.dropdown .mainButton {
+.dropdownAbout .mainButton {
     background: #FF6700;
     border: none;
     outline: none;
@@ -169,7 +169,7 @@ section {
     margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdownAbout:hover .dropbtn {
     background-color: red;
 }
 
