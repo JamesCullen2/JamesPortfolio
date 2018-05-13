@@ -137,14 +137,14 @@ header {
 
 ul {
     display: inline-block;
-    float: right;
-    color: #00539F;
+    float: left;
+    color: #C0C0C0;
+    padding-left: 12px;
 }
 
 li {
     list-style: none;
-    margin-right: 10px;
-    text-align: right;
+    text-align: left;
 }
 
 section {
@@ -232,7 +232,7 @@ section {
     padding: 0 60px;
 }
 
-.footer-nav-bar a {
+.copyright {
     position: absolute;
     color: #00539F;
     text-decoration: none;
