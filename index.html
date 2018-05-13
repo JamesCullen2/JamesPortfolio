@@ -7,15 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
     <nav>
-        <h3 class="title">a<br>&lt;p&gt;rogramming<br>li&eta;-gwist</h3>
+        <h4 class="title">A<br>&lt;p&gt;rogramming<br>li&eta;-gwist</h4>
         <div class="dropdownNav">
-            <button class="dropButton" id="dropButton">
-                <img src="app/images/hamburger_menu_icon.png" alt="James Cullen Contact">
-            </button>
-            <div class="dropdown-content" id="dropdownContent">
-                <a href="#about">about me</a>
-                <a href="#portfolio">portfolio</a>
-            </div>
+                <a href="mailto:JamesCullenDev@gmail.com">
+                <img src="app/images/email_icon_small.png" alt="James Cullen Contact">
+                </a>
         </div>
     </nav>
 <body id="body">
@@ -36,8 +32,9 @@
                     <h1 class="aboutMe" >About Me</h1>
                 </div>
           <div class="dropdownAbout">
-                <button id="background" class="mainButton"><p>Background</p>
+                <button id="background" class="mainButton"><h3>Background</h3>
                 <span id="dropdownBackground" class="dropdownContentMain">
+                    <img class="image-icons" src="app/images/TEDx_Point.jpg" alt="Unity-Hub">
                     <p>I have been working in software development for 3 years.
                     Initially, in 2015, I founded a digital tech start-up, Unity-Hub.
                     The aim of the company was to develop a Web App that makes business meetings more productive.
@@ -54,8 +51,9 @@
                 </button>
           </div>
           <div class="dropdownAbout">
-                <button id="skills" class="mainButton"><p>Skills</p>
+                <button id="skills" class="mainButton"><h3>Skills</h3>
                 <span id="dropdownSkills" class="dropdownContentMain">
+                    <img class="image-icons" src="app/images/code_skills.jpg" alt="Unity-Hub">
                     <p>I enrolled on the Mayden Academy software development programme in February 2018.
                     This began a four month intensive course of advanced software development, including: HTML, CSS,
                     CSM, SQL, JS, MVC & PHP, Node.js and Zend.
@@ -64,8 +62,9 @@
                 </button>
           </div>
           <div class="dropdownAbout">
-                <button id="interests" class="mainButton"><p>Interests</p>
+                <button id="interests" class="mainButton"><h3>Interests</h3>
                 <span id="dropdownInterests" class="dropdownContentMain">
+                    <img class="image-icons" src="app/images/hockey_team.jpg" alt="Unity-Hub">
                     <p>I am a very proud husband and father of a one year-old baby boy, Joshua! We live in Keynsham
                     in the first house we have ever owned. My wife, Hannah, and I met in Mexico in 2003 while we were
                     volunteering for a charity organisation. My wife is originally from Bristol area whereas I was
@@ -80,10 +79,10 @@
         <section id="portfolio" class="portfolio">
                 <h1>Portfolio</h1>
                 <div class="dropdownPortfolio">
-                    <button id="teamProjects" class="mainButton"><p>Team Projects</p></button>
-                    <div id="dropdownTeamProjects" class="dropdownContentMain">
-                        <a class="image-icons" target="_blank" href="https://github.com/Mayden-Academy/aptitude-test">
-                            <img src="app/images/aptitude_test_mobile.png"/>
+                    <button id="teamProjects" class="mainButton"><h3>Team Projects</h3>
+                    <span id="dropdownTeamProjects" class="dropdownContentMain">
+                        <a target="_blank" href="https://github.com/Mayden-Academy/aptitude-test">
+                            <img class="image-icons" src="app/images/aptitude_test_mobile.png"/>
                         </a>
                         <p>I helped to continue the build for an online quiz application for users to register
                             and take an academy aptitude test. As a team, we refactored an existing code base, including
@@ -91,16 +90,16 @@
                             so that the course administrators could easily view, edit and delete participants' data.
                             For this project, I worked mainly in JavaScript but also refactored PHP.
                         </p>
-                        <a class="image-icons" target="_blank" href="https://dev.maydenacademy.co.uk/projects/2018Feb/EcommerceStoreFeb2018/">
-                            <img src="app/images/ecommerce_mobile.png"/>
+                        <a target="_blank" href="https://dev.maydenacademy.co.uk/projects/2018Feb/EcommerceStoreFeb2018/">
+                            <img class="image-icons" src="app/images/ecommerce_mobile.png"/>
                         </a>
                         <p>I helped to build an ecommerce clothes store. As a team, we built a suite of products
                             arranged by category and able to be viewed by the user with details of title, image, prize, size,
                             colour and description.
                             For this project, I worked mainly in OOP PHP and used autoloading with namespacing.
                         </p>
-                        <a class="image-icons" target="_blank" href="https://dev.maydenacademy.co.uk/projects/2018Feb/JSGame/">
-                            <img src="app/images/game_mobile.png" alt="racing-Game">
+                        <a target="_blank" href="https://dev.maydenacademy.co.uk/projects/2018Feb/JSGame/">
+                            <img class="image-icons" src="app/images/game_mobile.png" alt="racing-Game">
                         </a>
                         <p>I helped to build an interactive game. As a team, we designed, coded and delivered
                             a racing-themed game for two players using keyboard controls. Specifically, I worked
@@ -108,28 +107,30 @@
                             view either race track before starting the game.
                             For this project, I worked mainly in JavaScript and JQuery.
                         </p>
-                    </div>
+                    </span>
+                    </button>
                 </div>
                 <div class="dropdownPortfolio">
-                    <button id="personalProjects" class="mainButton"><p>Personal Projects</p></button>
-                    <div id="dropdownPersonalProjects" class="dropdownContentMain">
-                        <a class="image-icons" target="_blank" href="#">
-                            <img src="app/images/web-app-image-2.png" alt="Unity-Hub">
+                    <button id="personalProjects" class="mainButton"><h3>Personal Projects</h3>
+                    <span id="dropdownPersonalProjects" class="dropdownContentMain">
+                        <a target="_blank" href="#">
+                            <img class="image-icons" src="app/images/web-app-image-2.png" alt="Unity-Hub">
                         </a>
                         <p>Here's an example of UI for Unity-Hub, a digital tech start-up I founded.
                         </p>
-                        <a class="image-icons" target="_blank" href="http://oratemate.com/">
-                            <img src="app/images/oratemate-website-image-1.png" alt="OrateMate Limited">
+                        <a target="_blank" href="http://oratemate.com/">
+                            <img class="image-icons" src="app/images/oratemate-website-image-1.png" alt="OrateMate Limited">
                         </a>
                         <p>Here's a website I built for my training / coaching company, OrateMate.
                         </p>
-                    </div>
+                    </span>
+                    </button>
                 </div>
         </section>
     </main>
     <footer id="contact">
         <div class="footer-nav-bar">
-            <a href="mailto:JamesCullenDev@gmail.com">JamesCullenDev@gmail.com</a>
+
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>

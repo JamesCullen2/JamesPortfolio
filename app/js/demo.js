@@ -1,10 +1,4 @@
 
-
-$("#dropButton").on('click', function (){
-    $("#dropdownContent").toggle( "slow", function () {
-    })
-})
-
 $("#background").on('click', function (){
     $("#dropdownBackground").toggle( "slow", function () {
     })
