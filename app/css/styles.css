@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #EBEBEB;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin: 10px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    background-color: #FF6700;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+}
+
+nav a {
+    float: left;
+    color: #FFFFFF;
+    padding: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dropdownNav {
+    display: inline-block;
+    float: right;
+    overflow: hidden;
+}
+
+header {
+    padding-top: 15vh;
+    height: 100vh;
+    background-color: #000000;
+    color: #C0C0C0;
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    text-align: left;
+    display: inline-block;
+    color: #00539F;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.hero {
+    display: block;
+    padding-top: 150px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+ul {
+    display: inline-block;
+    float: left;
+    color: #C0C0C0;
+    padding-left: 12px;
+}
+
+li {
+    list-style: none;
+    text-align: left;
+}
+
+section {
+    padding: 0 20px;
+    min-height: 100vh;
+}
+
+.dropdownAbout, .dropdownPortfolio {
+    display: block;
+    float: left;
+    overflow: hidden;
+}
+
+.dropdownAbout .mainButton, .dropdownPortfolio .mainButton {
+    background-color: #3A6EA5;
+    border: solid thin;
+    border-radius: 15px;
+    padding: 15px 32px;
+    text-align: center;
+    margin: 5px;
+    color: #C0C0C0;
+    font-style: normal;
+    min-width: 234px;
+}
+
+/*.navbar a:hover, .dropdownAbout:hover .dropbtn {*/
+    /*background-color: red;*/
+/*}*/
+
+#dropdownBackground, #dropdownSkills, #dropdownInterests, #dropdownTeamProjects, #dropdownPersonalProjects {
+    display: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+#backgroundText {
+    display: none;
+}
+
+.about {
+    padding-top: 20px;
+}
+
+.subheadings {
+    display: inline-block;
+}
+
+.aboutImage {
+    width: 80%;
+    max-width: 234px;
+    height: auto;
+}
+
+.projectImage {
+    width: 80%;
+    max-width: 234px;
+    height: auto;
+}
+
+.footer-nav-bar {
+    overflow: auto;
+    background-color: #FF6700;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.copyright {
+    position: absolute;
+    color: #00539F;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+/*Tablet */
+
+@media only screen and (min-width: 600px) {
+
+    li {
+        margin-right: 10px;
+        text-align: left;
+    }
+    .footer-links {
+        height: 30vh;
+    }
+    .footer-nav-bar {
+        padding: 0 70px;
+    }
+    .footer-nav-buttons {
+        width: 30%;
+    }
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 1200px) {
+
+    .dropdownAbout {
+        display: inline-block;
+        float: left;
+        overflow: hidden;
+        width: 33%;
+    }
+
+    .dropdownPortfolio {
+        display: inline-block;
+        float: left;
+        overflow: hidden;
+        width: 442px;
+    }
+
+    .dropdownAbout .mainButton {
+        background-color: #3A6EA5;
+        border: solid thin;
+        border-radius: 15px;
+        padding: 15px 32px;
+        text-align: center;
+        margin: 5px;
+        color: #C0C0C0;
+        font-style: normal;
+        min-width: 234px;
+        min-height: 500px;
+        width: 33%;
+    }
+
+    .dropdownPortfolio .mainButton {
+    background-color: #3A6EA5;
+    border: solid thin;
+    border-radius: 15px;
+    padding: 15px 32px;
+    text-align: center;
+    margin: 5px;
+    color: #C0C0C0;
+    font-style: normal;
+    min-width: 234px;
+    min-height: 500px;
+    width: 442px;
+}
+
+    #dropdownBackground, #dropdownSkills, #dropdownInterests, #dropdownTeamProjects, #dropdownPersonalProjects {
+        display: inline-block;
+        float: left;
+    }
+
+    .subheadings {
+        display: inline-block;
+    }
+    
+    .aboutImage {
+        width: 80%;
+        max-width: 234px;
+        height: auto;
+    }
+
+    .projectImage {
+        display: inline-block;
+        float: left;
+        width: 80%;
+        max-width: 134px;
+        height: auto;
+        padding: 0 10px 0 0;
+    }
+
+    .dropdownContentMain p {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    li {
+        float: right;
+        margin-right: 10px;
+    }
+
+    .footer-links {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .footer-nav-bar {
+        margin: 0 auto;
+        width: 100%;
+        border: 5px #FFFFFF;
+        position: center;
+    }
+
+    .footer-nav-buttons {
+        width: 30%;
+    }
+}
+
+
+/*colours:*/
+/*#FF6700 orange*/
+/*#EBEBEB silver*/
+/* dark silver*/
+/*#3A6EA5 blue*/
+/*#00539F darker blue*/
