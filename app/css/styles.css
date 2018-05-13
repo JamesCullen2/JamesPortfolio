@@ -31,7 +31,7 @@ h4 {
 }
 
 p {
-    text-align: justify;
+    text-align: center;
     font-size: 1.5em;
     font-family: 'Montserrat', sans-serif;
 }
@@ -174,23 +174,7 @@ section {
     /*background-color: red;*/
 /*}*/
 
-#dropdownBackground {
-    display: none;
-}
-
-#dropdownSkills {
-    display: none;
-}
-
-#dropdownInterests {
-    display: none;
-}
-
-#dropdownTeamProjects {
-    display: none;
-}
-
-#dropdownPersonalProjects {
+#dropdownBackground, #dropdownSkills, #dropdownInterests, #dropdownTeamProjects, #dropdownPersonalProjects {
     display: none;
 }
 
@@ -210,11 +194,17 @@ section {
     padding-top: 20px;
 }
 
-.aboutMe {
+.subheadings {
     display: inline-block;
 }
 
-.image-icons {
+.aboutImage {
+    width: 80%;
+    max-width: 234px;
+    height: auto;
+}
+
+.projectImage {
     width: 80%;
     max-width: 234px;
     height: auto;
@@ -262,6 +252,76 @@ section {
 /* Desktop */
 
 @media only screen and (min-width: 1200px) {
+
+    .dropdownAbout {
+        display: inline-block;
+        float: left;
+        overflow: hidden;
+        width: 33%;
+    }
+
+    .dropdownPortfolio {
+        display: inline-block;
+        float: left;
+        overflow: hidden;
+        width: 442px;
+    }
+
+    .dropdownAbout .mainButton {
+        background-color: #3A6EA5;
+        border: solid thin;
+        border-radius: 15px;
+        padding: 15px 32px;
+        text-align: center;
+        margin: 5px;
+        color: #C0C0C0;
+        font-style: normal;
+        min-width: 234px;
+        min-height: 500px;
+        width: 33%;
+    }
+
+    .dropdownPortfolio .mainButton {
+    background-color: #3A6EA5;
+    border: solid thin;
+    border-radius: 15px;
+    padding: 15px 32px;
+    text-align: center;
+    margin: 5px;
+    color: #C0C0C0;
+    font-style: normal;
+    min-width: 234px;
+    min-height: 500px;
+    width: 442px;
+}
+
+    #dropdownBackground, #dropdownSkills, #dropdownInterests, #dropdownTeamProjects, #dropdownPersonalProjects {
+        display: inline-block;
+        float: left;
+    }
+
+    .subheadings {
+        display: inline-block;
+    }
+    
+    .aboutImage {
+        width: 80%;
+        max-width: 234px;
+        height: auto;
+    }
+
+    .projectImage {
+        display: inline-block;
+        float: left;
+        width: 80%;
+        max-width: 134px;
+        height: auto;
+        padding: 0 10px 0 0;
+    }
+
+    .dropdownContentMain p {
+        text-align: left;
+    }
 
     li {
         float: right;

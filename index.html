@@ -28,23 +28,15 @@
     <main class="container">
       <section id="about">
                 <div class="about">
-                    <h1 class="aboutMe" >About Me</h1>
+                    <h1 class="subheadings" >About Me</h1>
                 </div>
           <div class="dropdownAbout">
                 <button id="background" class="mainButton"><h3>Background</h3>
                 <span id="dropdownBackground" class="dropdownContentMain">
-                    <img class="image-icons" src="app/images/TEDx_Point.jpg" alt="Unity-Hub">
-                    <p>I have been working in software development for 3 years.
-                    Initially, in 2015, I founded a digital tech start-up, Unity-Hub.
-                    The aim of the company was to develop a Web App that makes business meetings more productive.
-                    I secured equity investment from <a href="http://www.webstartbristol.com/">Webstart Bristol</a> to develop my idea and earned a place in
-                    the first <a href="https://www.entrepreneurial-spark.com/">Entrepreneurial Spark</a> incubator in Bristol. After receiving the investment I
-                    outsourced design and development work in order to prove concept and raise more investment.
-                    Employing the services of a front-end developer - and working alongside them - gave me a
-                    fantastic insight into coding and beyond, such as user-profiling and agile methodology.
-                    As a non-technical director during this time, I became fascinated with the software
-                    development side of the project; I love finding solutions to problems.
-                    Ultimately, I decided to learn how to build software to ‘scratch my own itch’.
+                    <img class="aboutImage" src="app/images/TEDx_Point.jpg" alt="Unity-Hub">
+                    <p>In 2015, I founded a digital tech start-up. After working alongside software developers on
+                    building a web app, I became fascinated with the technical side of the project. Ultimately,
+                    I decided to learn how to build software to ‘scratch my own itch’.
                     </p>
                 </span>
                 </button>
@@ -52,19 +44,21 @@
           <div class="dropdownAbout">
                 <button id="skills" class="mainButton"><h3>Skills</h3>
                 <span id="dropdownSkills" class="dropdownContentMain">
-                    <img class="image-icons" src="app/images/code_skills.jpg" alt="Unity-Hub">
+                    <img class="aboutImage" src="app/images/code_skills.jpg" alt="Unity-Hub">
                     <ul>
-                        <li><h3>Full Stack Developer</h3></li>
-                        <li><h3>Certified Scrum Master</h3></li>
-                        <li><h3>Effective Communicator</h3></li>
+                        <li><h3>Full Stack Development</h3></li>
+                        <li><h3>Scrum Mastery</h3></li>
+                        <li><h3>Effective Communication</h3></li>
+                        <li><h3>Creative Thinking</h3></li>
                     </ul>
+                    <a href="app/includes/James_Cullen_CV_Software_Developer.pdf"><h3>Please find my CV here.</h3></a>
                 </span>
                 </button>
           </div>
           <div class="dropdownAbout">
                 <button id="interests" class="mainButton"><h3>Interests</h3>
                 <span id="dropdownInterests" class="dropdownContentMain">
-                    <img class="image-icons" src="app/images/hockey_team.jpg" alt="Unity-Hub">
+                    <img class="aboutImage" src="app/images/hockey_team.jpg" alt="Unity-Hub">
                     <p>I am a very proud husband and father to a one year-old baby boy, Joshua! We are blessed with
                         many great friends and family. I enjoy keeping
                         myself fit and active; I currently play for Keynsham Hockey Club.
@@ -74,35 +68,29 @@
           </div>
         </section>
         <section id="portfolio" class="portfolio">
-                <h1>Portfolio</h1>
+            <div class="about">
+                <h1 class="subheadings" >Portfolio</h1>
+            </div>
                 <div class="dropdownPortfolio">
                     <button id="teamProjects" class="mainButton"><h3>Team Projects</h3>
                     <span id="dropdownTeamProjects" class="dropdownContentMain">
-                        <a target="_blank" href="https://github.com/Mayden-Academy/aptitude-test">
-                            <img class="image-icons" src="app/images/aptitude_test_mobile.png"/>
-                        </a>
-                        <p>I helped to continue the build for an online quiz application for users to register
-                            and take an academy aptitude test. As a team, we refactored an existing code base, including
-                            bug fixes. Specifically, I worked on creating a new link between the admin page and the API
-                            so that the course administrators could easily view, edit and delete participants' data.
-                            For this project, I worked mainly in JavaScript but also refactored PHP.
+                        <p><img class="projectImage" src="app/images/aptitude_test_mobile.png"/><strong>Mayden Academy
+                            online aptitude test application.</strong> Working as part of a team, I created a new link
+                            between the admin page and an API using JavaScript and also refactored existing PHP code.
                         </p>
                         <a target="_blank" href="https://dev.maydenacademy.co.uk/projects/2018Feb/EcommerceStoreFeb2018/">
-                            <img class="image-icons" src="app/images/ecommerce_mobile.png"/>
+                            <img class="projectImage" src="app/images/ecommerce_mobile.png"/>
                         </a>
-                        <p>I have also built an ecommerce clothes store. As a team, we built a suite of products
+                        <p><strong>Totally Pawesome ecommerce clothes store.</strong> As a team, we built a suite of products
                             arranged by category and able to be viewed by the user with details of title, image, prize, size,
-                            colour and description.
-                            For this project, I worked mainly in object-oriented PHP.
+                            colour and description. I worked mainly in object-oriented PHP.
                         </p>
                         <a target="_blank" href="https://dev.maydenacademy.co.uk/projects/2018Feb/JSGame/">
-                            <img class="image-icons" src="app/images/game_mobile.png" alt="racing-Game">
+                            <img class="projectImage" src="app/images/game_mobile.png" alt="racing-Game">
                         </a>
-                        <p>I worked as part of a team to build an interactive game. We designed, coded and delivered
-                            a racing-themed game for two players using keyboard controls. Personally, I worked
-                            on designing the first of two tracks and creating an ajax request that allows users to
-                            view either race track before starting the game.
-                            For this project, I worked mainly in JavaScript and JQuery.
+                        <p><strong>Interactive Racing Game.</strong> Working in a team, I designed the first of two tracks and
+                            created an ajax request that allows users to view either race track before starting the game.
+                            I worked mainly in JavaScript and JQuery.
                         </p>
                     </span>
                     </button>
@@ -111,7 +99,7 @@
                     <button id="personalProjects" class="mainButton"><h3>Personal Projects</h3>
                     <span id="dropdownPersonalProjects" class="dropdownContentMain">
                         <a target="_blank" href="#">
-                            <img class="image-icons" src="app/images/web-app-image-2.png" alt="Unity-Hub">
+                            <img class="projectImage" src="app/images/web-app-image-2.png" alt="Unity-Hub">
                         </a>
                         <p>I designed and developed the concept of Unity-Hub, a Web App aims to make business meetings
                             matter. Unity-Hub is the result of Productive Meetings; a digital tech start-up I founded
