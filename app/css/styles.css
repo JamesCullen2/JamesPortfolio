@@ -61,53 +61,6 @@ nav a {
     overflow: hidden;
 }
 
-/*.dropdownNav .dropButton {*/
-    /*background: #FF6700;*/
-    /*border: none;*/
-    /*outline: none;*/
-    /*padding: 25px;*/
-    /*margin: 0;*/
-/*}*/
-
-/*.navbar a:hover, .dropdownNav:hover .dropbtn {*/
-    /*background-color: red;*/
-/*}*/
-
-/*.dropdown-content {*/
-    /*display: none;*/
-    /*position: absolute;*/
-    /*background-color: #f9f9f9;*/
-    /*min-width: 160px;*/
-    /*box-shadow: 0 8px 16px 0;*/
-    /*z-index: 1;*/
-/*}*/
-
-/*#dropdownContent {*/
-    /*display: none;*/
-    /*position: absolute;*/
-    /*background-color: #FF6700;*/
-    /*min-width: 160px;*/
-    /*box-shadow: 0 8px 16px 0;*/
-    /*z-index: 1;*/
-/*}*/
-
-/*.dropdown-content a {*/
-    /*float: none;*/
-    /*padding: 12px 16px;*/
-    /*text-decoration: none;*/
-    /*display: block;*/
-    /*text-align: left;*/
-    /*color: #00539F;*/
-/*}*/
-
-/*.dropdown-content a:hover {*/
-    /*background-color: #ddd;*/
-/*}*/
-
-/*.show {*/
-    /*display: block;*/
-/*}*/
-
 header {
     padding-top: 15vh;
     height: 100vh;
@@ -227,7 +180,6 @@ section {
     color: #00539F;
     text-decoration: none;
     padding-top: 20px;
-    padding-left: 10px;
 }
 
 /*Tablet */
@@ -339,7 +291,6 @@ section {
         width: 100%;
         border: 5px #FFFFFF;
         position: center;
-        text-align: center;
     }
 
     .footer-nav-buttons {
