@@ -205,6 +205,18 @@ section {
 
 @media only screen and (min-width: 1200px) {
 
+    h1 {
+        font-size: 4em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 2em;
+    }
+
     .dropdownAbout {
         display: inline-block;
         float: left;
@@ -225,12 +237,11 @@ section {
         border-radius: 15px;
         padding: 15px 32px;
         text-align: center;
-        margin: 5px;
+        margin: 0 auto;
         color: #C0C0C0;
         font-style: normal;
         min-width: 234px;
         min-height: 500px;
-        width: 33%;
     }
 
     .dropdownPortfolio .mainButton {
