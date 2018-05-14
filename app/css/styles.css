@@ -201,9 +201,107 @@ section {
     }
 }
 
+/* Laptop */
+
+@media only screen and (min-width: 1224px) {
+
+    .dropdownAbout {
+        display: inline-block;
+        float: left;
+        overflow: hidden;
+        width: 33%;
+    }
+
+    .dropdownPortfolio {
+        display: inline-block;
+        float: left;
+        overflow: hidden;
+        width: 50%;
+    }
+
+    .dropdownAbout .mainButton {
+        background-color: #3A6EA5;
+        border: solid thin;
+        border-radius: 15px;
+        padding: 15px 32px;
+        text-align: center;
+        margin: 5px;
+        color: #C0C0C0;
+        font-style: normal;
+        min-width: 234px;
+        min-height: 500px;
+        width: 100%;
+    }
+
+    .dropdownPortfolio .mainButton {
+        background-color: #3A6EA5;
+        border: solid thin;
+        border-radius: 15px;
+        padding: 15px 32px;
+        text-align: center;
+        margin: 5px;
+        color: #C0C0C0;
+        font-style: normal;
+        min-width: 234px;
+        min-height: 500px;
+        width: 442px;
+    }
+
+    #dropdownBackground, #dropdownSkills, #dropdownInterests, #dropdownTeamProjects, #dropdownPersonalProjects {
+        display: inline-block;
+        float: left;
+    }
+
+    .subheadings {
+        display: inline-block;
+    }
+
+    .aboutImage {
+        width: 80%;
+        max-width: 234px;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .projectImage {
+        display: inline-block;
+        float: left;
+        width: 80%;
+        max-width: 134px;
+        height: auto;
+        padding: 0 10px 0 0;
+    }
+
+    .dropdownContentMain p {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    li {
+        float: right;
+        margin-right: 10px;
+    }
+
+    .footer-links {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .footer-nav-bar {
+        margin: 0 auto;
+        width: 100%;
+        border: 5px #FFFFFF;
+        position: center;
+    }
+
+    .footer-nav-buttons {
+        width: 30%;
+    }
+}
+
 /* Desktop */
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1824px) {
 
     h1 {
         font-size: 4em;
