@@ -312,7 +312,7 @@ section {
     }
 
     p {
-        font-size: 2em;
+        font-size: 1.75em;
     }
 
     .dropdownAbout {
@@ -326,7 +326,6 @@ section {
         display: inline-block;
         float: left;
         overflow: hidden;
-        width: 442px;
     }
 
     .dropdownAbout .mainButton {
@@ -353,7 +352,7 @@ section {
     font-style: normal;
     min-width: 234px;
     min-height: 500px;
-    width: 442px;
+    width: 100%;
 }
 
     #dropdownBackground, #dropdownSkills, #dropdownInterests, #dropdownTeamProjects, #dropdownPersonalProjects {
@@ -375,7 +374,7 @@ section {
         display: inline-block;
         float: left;
         width: 80%;
-        max-width: 134px;
+        max-width: 268px;
         height: auto;
         padding: 0 10px 0 0;
     }
